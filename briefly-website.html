@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrieFly</title>
+
+  <!-- SEO -->
+  <meta name="description" content="BrieFly — All You Need To Fly. Professional IFR charts, DA40/DA42 docs, aerodrome directory and automated preflight briefings for student and CPL/IR pilots." />
+  <link rel="canonical" href="https://yourdomain.example.com/" />
+  <link rel="sitemap" href="/sitemap.xml" />
+  <link rel="robots" content="index,follow" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="BrieFly — All You Need To Fly" />
+  <meta property="og:description" content="Professional IFR charts, DA40/DA42 docs, aerodrome directory and automated preflight briefings for student and CPL/IR pilots." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.example.com/" />
+  <meta property="og:image" content="/icon-512.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BrieFly — All You Need To Fly" />
+  <meta name="twitter:description" content="Professional IFR charts, DA40/DA42 docs, aerodrome directory and automated preflight briefings." />
+  <meta name="twitter:image" content="/icon-512.png" />
+
+  <!-- Favicon / App icon hooks -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#FFFFFF" />
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Montserrat to align with in-app branding -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Playfair Display for quote typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Preload hero image (replace with your optimized image) -->
+  <!-- TODO: Replace hero.jpg with your licensed hero image optimized for web -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1600&auto=format&fit=crop" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0B1221',
+              indigo: '#121A2B',
+              teal: '#009688',
+              gold: '#FFD54F'
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat','ui-sans-serif','system-ui','-apple-system','"Segoe UI"','Roboto','"Helvetica Neue"','Arial']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BrieFly",
+    "operatingSystem": "Windows, macOS, Android",
+    "applicationCategory": "EducationalApplication",
+    "description": "All You Need To Fly — IFR charts, DA40/DA42 documents, aerodrome directory and fast preflight briefings for student and CPL/IR pilots.",
+    "url": "https://yourdomain.example.com/",
+    "image": "/icon-512.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "ratingCount": "150"
+    }
+  }
+  </script>
+
+  <!-- Minimal focus styles for accessibility -->
+  <style>
+    :root { color-scheme: light; }
+    :focus { outline: 3px solid rgba(0,150,136,0.18); outline-offset: 3px; }
+    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+    .font-quote { font-family: 'Playfair Display', serif; }
+  </style>
+
+  <!-- Analytics placeholder -->
+  <!-- TODO: Add GA4 gtag snippet here, replace G-XXXXXXX with your ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+  <!-- Passer au contenu principal -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-teal text-white px-3 py-2 rounded">Aller au contenu principal</a>
+
+  <!-- Sticky top nav -->
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <a href="#home" class="group flex items-center gap-3" aria-label="Accueil BrieFly">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="BrieFly logo" class="h-11 w-11 rounded-md object-cover shadow-sm transition group-hover:scale-[1.02]" />
+            <span class="font-extrabold tracking-tight text-brand-navy leading-tight text-2xl sm:text-3xl transition group-hover:opacity-90">BrieFly</span>
+          </a>
+        </div>
+
+        <!-- Navigation bureau -->
+        <nav class="hidden md:flex md:items-center md:gap-6" aria-label="Primary navigation">
+          <a href="#features" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Fonctionnalités</a>
+          <a href="#screenshots" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Captures</a>
+          <a href="#downloads" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Téléchargements</a>
+          <a href="#pricing" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Tarifs</a>
+          <a href="#faq" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">FAQ</a>
+          <a href="#contact" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Mobile toggle -->
+          <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md text-slate-700 hover:bg-gray-100 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm">
+      <div class="px-4 pt-4 pb-6 space-y-2">
+        <a href="#features" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">Fonctionnalités</a>
+        <a href="#screenshots" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">Captures</a>
+        <a href="#downloads" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">Téléchargements</a>
+        <a href="#pricing" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">Tarifs</a>
+        <a href="#faq" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">FAQ</a>
+        <a href="#contact" class="block px-3 py-2 rounded text-slate-800 hover:bg-gray-50 font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="focus:outline-none">
+
+    <!-- HERO -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-50/60 to-white">
+      <!-- Clean background: no image overlay to avoid white cast behind transparent PNG -->
+      <div class="absolute inset-0"></div>
+
+      <!-- Quote merged into hero top -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-3 md:gap-2">
+          <!-- Partie gauche de la citation -->
+          <div class="text-center md:text-left md:pr-2">
+            <div class="flex w-full items-center justify-center md:justify-start gap-1">
+              <blockquote class="font-quote italic font-semibold text-3xl md:text-4xl tracking-tight text-brand-navy leading-tight">Il y a le pilote</blockquote>
+            </div>
+          </div>
+
+          <!-- Logo au centre (no container, dark overlay effect) -->
+          <div class="flex items-center justify-center">
+            <video id="quote-video" class="w-40 sm:w-56 md:w-72 lg:w-96 xl:w-[28rem] h-auto object-contain" autoplay muted loop playsinline preload="auto" poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKjxWBz255IcPQq1QO6fF1km9WZhWROf53Xidd7SvB4SmEjW468Ms8pqQ6SqzdRKZmZ6sEeRv7KmlwT512PdWnYvZEC12aZK4oMHXxPXeZHJ-ujbueD8Zl5mx7k0SrbRg0BA4P3XW5eDW1IJtLpdNDH4jLYP46iKfTdEDNobOUle1V4Woqo5Z2nL4tOkvd/w640-h312/helice.gif">
+              <source src="https://ia601007.us.archive.org/5/items/fotor-video_enhancer-preview-20250916173553/fotor-video_enhancer-preview-20250916173553.mp4" type="video/mp4" />
+              Votre navigateur ne prend pas en charge la vidéo HTML5.
+            </video>
+          </div>
+
+          <!-- Partie droite de la citation -->
+          <div class="text-center md:text-right md:pl-2">
+            <div class="flex w-full items-center justify-center md:justify-end gap-1">
+              <blockquote class="font-quote italic font-semibold text-3xl md:text-4xl tracking-tight text-brand-navy leading-tight">et le reste du monde</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 items-center">
+          <div class="lg:col-span-6 xl:col-span-6 xl:pr-8">
+            <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-800 text-xs font-medium shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path fill-rule="evenodd" d="M12 2.25c-.41 0-.82.084-1.2.25L5.1 4.59A2.25 2.25 0 003.75 6.6v4.83c0 5.327 3.407 10.137 8.5 11.82 5.093-1.683 8.5-6.493 8.5-11.82V6.6a2.25 2.25 0 00-1.35-2.01l-5.7-2.09c-.38-.166-.79-.25-1.2-.25zm3.28 7.03a.75.75 0 10-1.06-1.06l-3.97 3.97-1.72-1.72a.75.75 0 10-1.06 1.06l2.25 2.25a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg>
+              Approuvé par des élèves et des pilotes licenciés
+            </p>
+            <h1 class="mt-3 text-5xl sm:text-6xl font-black tracking-tight text-brand-navy leading-tight">BrieFly</h1>
+            <p class="mt-3 text-2xl text-slate-800 font-semibold">All You Need To Fly — cartes IFR, documents avion, données aérodromes et briefings pré‑vol rapides dans une application claire.</p>
+
+            <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">Conçue pour les élèves et pilotes CPL/IR ainsi que les écoles de pilotage. Moins de temps à chercher, plus de temps à préparer des vols sûrs et efficaces.</p>
+
+            <!-- Boutons CTA retirés comme demandé -->
+
+            <p class="mt-3 text-sm text-slate-500">Tests fermés en cours — le lien Google Play sera bientôt mis à jour.</p>
+
+          
+          </div>
+
+          <!-- Right: desktop screenshot -->
+          <div class="lg:col-span-6 xl:col-span-6 flex justify-end">
+            <div class="relative w-full max-w-none">
+              <!-- Subtle spotlight (radial gradient) behind transparent PNG for contrast -->
+              <div class="pointer-events-none absolute -inset-6 sm:-inset-8 -z-10 opacity-60"
+                   style="background: radial-gradient(60% 60% at 60% 50%, rgba(0,150,136,0.10) 0%, rgba(11,18,33,0.06) 45%, rgba(11,18,33,0.02) 75%, rgba(11,18,33,0) 100%);"></div>
+              <!-- Desktop mockup: transparent PNG already includes the frame -->
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijWzfX0QSSKHFNza_nJvR9u5Yts1ay1dXgd3yXWufhOEBVExFIkXdpvMwcazSD-qvsfnl1eJNLvJRW8WGzQPZSXFVnRy-JP09_BleMDw0fxjtZh6D9Pm5gp5UyN2bS1CfKvRil8gZYl4l7b8S0XyIXA6dpTm3wYFqJx6B4eBgoHcMGo3QaH7L_dBXltKKP/s16000/Nouveau%20projet.png" alt="BrieFly desktop preview" loading="lazy" class="w-full h-auto object-contain drop-shadow-2xl xl:max-h-[50rem] 2xl:max-h-[58rem] mx-auto"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/1600x900?text=Desktop+Preview';" />
+              
+              
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE vs AFTER: Dossier de vol -->
+    <section class="py-16 bg-gradient-to-b from-white to-slate-50 border-y border-gray-100" aria-labelledby="compare">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Two-column layout: left (title + text + cards), right (phone screenshot) -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch md:min-h-[640px]">
+          <!-- Left: Title + description + comparison cards -->
+          <div class="md:col-span-7 flex flex-col h-full">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-teal/10 text-brand-teal">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <h2 id="compare" class="text-2xl sm:text-3xl font-extrabold tracking-tight text-brand-navy">DOSSIER DE VOL</h2>
+            </div>
+            <p class="mt-3 text-slate-600 max-w-3xl">Planification, briefing et dépôt au même endroit : METAR/TAF/SIGMET, TEMSI, WINTEM, NOTAM, carnet de navigation, masse &amp; centrage et plan de vol — le tout réuni dans un flux clair et fiable.</p>
+            <div class="mt-6 space-y-6 flex-1">
+            <!-- BEFORE -->
+            <div class="rounded-2xl border border-gray-200 bg-white/95 p-6 shadow-sm">
+              <div class="flex items-center gap-2 text-slate-800 font-semibold">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-red-50 text-red-600">✕</span>
+                <span>Avant (manuel, fragmenté)</span>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-slate-400" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="currentColor" stroke-width="2"/></svg>
+                  <span>METAR / TAF / SIGMET, TEMSI, WINTEM sur Aeroweb — changer d’onglet et copier les données</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <!-- Funnel (filter) icon to reflect the action -->
+                  <svg class="h-4 w-4 mt-1 text-slate-400" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 4h18l-7 8v6l-4-2v-4L3 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  </svg>
+                  <span>NOTAM vérifiés séparément (ex. FAA) — filtrer et recouper la pertinence</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-slate-400" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>Carnet de navigation créé à part dans des feuilles de calcul</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-slate-400" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2"/></svg>
+                  <span>Masse &amp; centrage (W&amp;B) calculés dans un autre outil</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-slate-400" viewBox="0 0 24 24" fill="none"><path d="M3 12l7-7m0 0v5m0-5H5m16 12l-7 7m0 0v-5m0 5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Plan de vol déposé séparément (EuroFPL, etc.)</span>
+                </li>
+              </ul>
+              <div class="mt-5 text-xs text-slate-500">Résultat : changements de contexte, risque d’oublis, ~10-20 minutes.</div>
+            </div>
+
+            <!-- AFTER -->
+            <div class="rounded-2xl border border-gray-200 bg-white/95 p-6 shadow-sm">
+              <div class="flex items-center gap-2 text-slate-800 font-semibold">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-emerald-50 text-emerald-600">✓</span>
+                <span>Après (BrieFly, unifié)</span>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-emerald-500" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Pack météo (METAR/TAF/SIGMET, TEMSI, WINTEM) compilé dans une seule vue</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-emerald-500" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>NOTAM filtrés et regroupés par route / AD</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-emerald-500" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Carnet de navigation auto‑généré à partir de la route et des performances</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-emerald-500" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Calculateur masse &amp; centrage intégré</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="h-4 w-4 mt-1 text-emerald-500" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Plan de vol préparé en parallèle et prêt au dépôt</span>
+                </li>
+              </ul>
+              <div class="mt-5 flex flex-wrap items-center gap-3 text-sm">
+                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1">⏱️ <span>~1–3 minutes</span></span>
+                <span class="inline-flex items-center gap-2 rounded-full bg-brand-teal/10 text-brand-teal px-3 py-1">📦 <span>Tout dans une seule app</span></span>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Right: phone screenshot -->
+          <div class="md:col-span-5 h-full">
+            <div class="relative h-full rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md p-3 flex items-center justify-center">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq9U4Q4634tCpT9I4TqAg5pGUFbibbwdy5jIypfLgY-HxeMQDgvFZSPO6AkTceVpUOY1YX_GTuH827bZ5hDbVe-dvMnd-ViP2HEILA9tDOT-bajz13NYcYBtw1WnCTlOTMGUUvwyuQgjEwPbO0nMtFn-pR99x_3eFtn47Xr0X2rJ0gSRZ1MQg01rt_ap80/s16000/dossier%20de%20vol.png" alt="BrieFly — Dossier de vol (phone)" class="w-full h-full object-contain rounded-xl" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/900x1800?text=Phone+preview';" />
+            </div>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- FONCTIONNALITÉS -->
+    <section id="features" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-brand-navy">Des fonctionnalités pour gagner du temps et réduire les risques</h2>
+          <p class="mt-3 text-slate-600">Chaque module de BrieFly simplifie la préparation, soutient les bonnes procédures et rend les briefings reproductibles et fiables.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Carte : Météo -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-teal/10 text-brand-teal rounded-lg">
+                <!-- Weather icon -->
+                <svg class="h-6 w-6 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">Briefings météo, comme il faut</h3>
+                <p class="mt-2 text-slate-600 text-sm">METAR/TAF/SIGMET normalisés pour un balayage rapide. TEMSI et WINTEM alignés sur votre route.</p>
+                <ul class="mt-3 text-slate-500 text-sm space-y-1">
+                  <li>Décodage et formatage cohérents</li>
+                  <li>Cartes haut niveau sensibles à la route</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte : NOTAMs -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-gold/10 text-brand-gold rounded-lg">
+                <!-- NOTAM icon -->
+                <svg class="h-6 w-6 text-brand-gold" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">NOTAMs clairs et triés</h3>
+                <p class="mt-2 text-slate-600 text-sm">Filtrés et regroupés par route/aérodrome pour ne garder que l’essentiel.</p>
+                <ul class="mt-3 text-slate-500 text-sm space-y-1">
+                  <li>Filtres et pertinence configurables</li>
+                  <li>Groupés par route et aérodrome</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte : Dossier de vol -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-blue-50 text-blue-600 rounded-lg">
+                <!-- Dossier icon -->
+                <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">Dossier de vol de bout en bout</h3>
+                <p class="mt-2 text-slate-600 text-sm">Un seul flux pour la météo, les NOTAMs, le log de nav, le centrage et le plan de vol — conçu pour des briefings reproductibles.</p>
+                <ul class="mt-3 text-slate-500 text-sm space-y-1">
+                  <li>Saisies et vérifications structurées</li>
+                  <li>Sorties adaptées aux instructeurs</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte : Prévisualisation du plan de vol -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-indigo-50 text-indigo-600 rounded-lg">
+                <!-- Preview icon -->
+                <svg class="h-6 w-6 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h12M3 17h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">Prévisualisation du plan de vol</h3>
+                <p class="mt-2 text-slate-600 text-sm">Validez les détails avant export ou dépôt grâce à une prévisualisation intégrée.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte : Aérodromes & cartes -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-gray-50 text-gray-600 rounded-lg">
+                <!-- Aerodrome icon -->
+                <svg class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">Aérodromes et cartes</h3>
+                <p class="mt-2 text-slate-600 text-sm">Répertoire d’aérodromes avec visionneuse de cartes et favoris pour vos terrains les plus utilisés.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte : DA40/DA42 + Garmin -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-teal/10 text-brand-teal rounded-lg">
+                <!-- Docs icon -->
+                <svg class="h-6 w-6 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h8" stroke="currentColor" stroke-width="1.6"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-brand-navy">Documentation DA40/DA42 + Garmin</h3>
+                <p class="mt-2 text-slate-600 text-sm">Docs avion et références Garmin, avec visionneuse photo/PDF et playlists de formation.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPTURES D’ÉCRAN -->
+    <section id="screenshots" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-3xl font-extrabold text-brand-navy">Captures d’écran</h2>
+          </div>
+          <div class="hidden md:flex items-center gap-2">
+            <button id="mc-prev" class="h-10 w-10 inline-flex items-center justify-center rounded-md border border-gray-200 bg-white text-slate-700 hover:bg-gray-50" aria-label="Précédent">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button id="mc-next" class="h-10 w-10 inline-flex items-center justify-center rounded-md border border-gray-200 bg-white text-slate-700 hover:bg-gray-50" aria-label="Suivant">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="mc-viewport" class="relative mt-6 overflow-hidden">
+          <!-- edge fades -->
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 to-transparent"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 to-transparent"></div>
+          <div id="mc-track" class="flex items-center gap-4 will-change-transform">
+            <!-- Cards (user images). Fixed rounded 16:9 thumbnails -->
+            <div class="mc-card flex-none group">
+              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi0b94TVQn6pSzbx5NA7F1kcxbMMwAXKfPTRCv6-I-LQ49PejOJvlSC5j-wWqJ8DmfN3yfJ85MzWjw2TZ8bfO6uzaxHbYEwRrXZcct_JrqZrGtzNyf63Z9w9xgfrwaBxusWDsSioKMseFPLAT36G3Egc3g4sGsNuYRmQcbYQa4GqpeGWOnr4qJSeF_gSNAe=s16000" alt="DA40 NG" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              </div>
+              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+                  <!-- Aircraft icon -->
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- fuselage -->
+                    <path d="M3 12h14" />
+                    <!-- wings -->
+                    <path d="M7 9l7 3-7 3" />
+                    <!-- tail -->
+                    <path d="M5 10v4" />
+                    <!-- nose triangle -->
+                    <path d="M17 12l4-2v4z" />
+                  </svg>
+                  <span>DA40 NG</span>
+              </div>
+            </div>
+            <div class="mc-card flex-none group">
+              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYO5gXJG6Xnk3kma65eH-lM33ug1GotsKTiQnHA68QBMII0a-Cz9FJCxTpVyl2MVEoxfIKarllpB4JFQ9s_aAs2zxMXZsG6CdZQfLeyIfhhECQlQjpKUJjjliKzsAtTNK4pQ3zlpQtZfGsJ0SJrq09UPg4UlBWRXmKfxs1splLuBBlUlPpO6m23SD9way/s16000/Nouveau%20projet%20(2).png" alt="Aviation English" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              </div>
+              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+                  <!-- Language (globe) icon -->
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18" />
+                    <path d="M12 3a15 15 0 0 1 0 18" />
+                    <path d="M12 3a15 15 0 0 0 0 18" />
+                  </svg>
+                  <span>Aviation English</span>
+              </div>
+            </div>
+            <div class="mc-card flex-none group">
+              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8y2tk6fafXAHf5aXkcfs4gNLYLP6HXAhfMoXbqSnq4lRTAxiYC_yjv4V85S7xpcsLpqkzqt0b5dTJYbH2wXvRK5g8q9TjvKwrmERIFm1Zh2zECW-vDtvRXB9G7RFgj8Sqwg4uED0ZUdGk3_ZlNR_IFWM0GaNQRcEGIw7Ud4ATPx4e-IudOI9TntMcHGI/s16000/Nouveau%20projet%20(1).png" alt="Annexes OACI" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              </div>
+              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6z"/><path d="M9 8h6"/><path d="M9 12h6"/></svg>
+                  <span>Annexes OACI</span>
+              </div>
+            </div>
+            <div class="mc-card flex-none group">
+              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnEvJgl5kdTjUbU9W62cCbpXz9TNL1q6aTfcAg-6Ncxba2UjBY3Q5mSFTUkBQmawJTjj626ikFDr_hkFnzODMEBTYyKba3psHJropSNiR4a-FtI1d_lAK-HpxwTWWbdMHdB3RS2lDNxiPC0k3arJZFvdjXNBO9QziZGYjfYfPGIjYbUYk18lvUVZF50ttt/s16000/Nouveau%20projet%20(4).png" alt="Dossier de vol" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              </div>
+              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+                  <!-- Meteo (cloud) icon -->
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11-1" />
+                  </svg>
+                  <span>Dossier de vol</span>
+              </div>
+            </div>
+            <div class="mc-card flex-none group">
+              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDHfZXdd8cc5HM0PswqRmq4RC_DHR8zLl9MZE0dJUFuF9ar36jpbNDvfs9o5T6uL-ZiNQTm3Y0HFZ0EswspeqVyI0oLKD6_ndYU5oVGxU9X5RmejADg73oMeEwQKOKu7vYV50D9LZUiqKbHRPfwITIZNm877dBiyleCNPqoxA13Gy-VTTz4ZRo-rzJOLWm/s16000/Nouveau%20projet%20(5).png" alt="Documents" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              </div>
+              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8"/><path d="M8 12h8"/></svg>
+                  <span>Documents</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile overlay arrows -->
+          <button id="mc-prev-overlay" class="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 inline-flex items-center justify-center rounded-full bg-white/90 border border-gray-200 shadow md:hidden" aria-label="Précédent">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button id="mc-next-overlay" class="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 inline-flex items-center justify-center rounded-full bg-white/90 border border-gray-200 shadow md:hidden" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Dots -->
+        <div id="mc-dots" class="mt-4 flex justify-center gap-2"></div>
+
+        <script>
+          (function(){
+            const viewport = document.getElementById('mc-viewport');
+            const track = document.getElementById('mc-track');
+            const prev = document.getElementById('mc-prev');
+            const next = document.getElementById('mc-next');
+            const prevOv = document.getElementById('mc-prev-overlay');
+            const nextOv = document.getElementById('mc-next-overlay');
+            const dotsEl = document.getElementById('mc-dots');
+            if (!viewport || !track) return;
+
+            const GAP = 16; // gap-4
+            let step = 0;      // card width + gap
+            let visible = 1;   // cards visible in viewport
+            let index = 0;     // current card index in the middle group
+            let autoplay = null;
+            let dragging = false, startX = 0, hasMoved = false;
+            // Cache des cartes originales pour reconstruire proprement après un retour d'onglet
+            let originalsCached = [];
+
+            function measure(){
+              const card = track.querySelector('.mc-card');
+              step = (card ? card.getBoundingClientRect().width : 320) + GAP;
+              const vpw = viewport.getBoundingClientRect().width;
+              visible = Math.max(1, Math.floor((vpw + GAP) / step));
+            }
+
+            // Build clones for seamless loop
+            function buildClones(){
+              const originals = originalsCached.length
+                ? originalsCached
+                : Array.from(track.querySelectorAll('.mc-card'));
+              if (!originalsCached.length) originalsCached = originals.slice();
+              // Clear any prior clones
+              track.innerHTML = '';
+              const all = [];
+              // prepend clones
+              originals.slice(-visible-2).forEach(n=> all.push(n.cloneNode(true)));
+              // originals
+              originals.forEach(n=> all.push(n));
+              // append clones
+              originals.slice(0, visible+2).forEach(n=> all.push(n.cloneNode(true)));
+              all.forEach(n=> track.appendChild(n));
+              // reset index to first original
+              index = visible+2; // first original
+              setX(true);
+
+              // Dots (one per original page group) -> number of groups = originals.length
+              dotsEl.innerHTML = '';
+              for (let i=0;i<originals.length;i++){
+                const b = document.createElement('button');
+                b.className = 'h-2.5 w-2.5 rounded-full bg-gray-300 aria-[current=true]:bg-brand-navy';
+                b.setAttribute('aria-current', i===0);
+                b.addEventListener('click', ()=> goTo(i));
+                dotsEl.appendChild(b);
+              }
+              updateDots();
+            }
+
+            function setX(instant){
+              if (instant) track.style.transition = 'none';
+              track.style.transform = 'translateX(' + (-index * step) + 'px)';
+              if (instant) requestAnimationFrame(()=>{ track.style.transition = ''; });
+            }
+
+            function go(dir){
+              track.style.transition = 'transform 500ms ease';
+              index += dir;
+              setX(false);
+            }
+
+            function goTo(dotIndex){
+              const originalsCount = track.children.length - 2*(visible+2);
+              index = (visible+2) + dotIndex; // align to start of that original card
+              setX(false);
+              updateDots();
+            }
+
+            function maybeWrap(){
+              const total = track.children.length;
+              const first = visible+2;
+              const last = first + (total - 2*(visible+2)) - 1;
+              if (index < first){
+                index = last - (first - index - 1);
+                setX(true);
+              } else if (index > last){
+                index = first + (index - last - 1);
+                setX(true);
+              }
+              updateDots();
+            }
+
+            function updateDots(){
+              const originalsCount = track.children.length - 2*(visible+2);
+              const current = (index - (visible+2) + originalsCount) % originalsCount;
+              Array.from(dotsEl.children).forEach((d,i)=> d.setAttribute('aria-current', String(i===current)));
+            }
+
+            function startAutoplay(){
+              stopAutoplay();
+              autoplay = setInterval(()=> go(1), 3000);
+            }
+            function stopAutoplay(){ if (autoplay) { clearInterval(autoplay); autoplay = null; } }
+
+            // Drag/Swipe
+            track.addEventListener('pointerdown', (e)=>{ dragging = true; startX = e.clientX; hasMoved = false; track.setPointerCapture(e.pointerId); stopAutoplay(); });
+            track.addEventListener('pointermove', (e)=>{
+              if (!dragging) return;
+              const dx = e.clientX - startX;
+              if (Math.abs(dx) > 8) hasMoved = true;
+            });
+            track.addEventListener('pointerup', (e)=>{
+              if (!dragging) return; dragging = false;
+              const dx = e.clientX - startX;
+              if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+              startAutoplay();
+            });
+            track.addEventListener('pointercancel', ()=>{ dragging = false; startAutoplay(); });
+
+            // Buttons
+            [prev, prevOv].forEach(b=> b && b.addEventListener('click', ()=>{ stopAutoplay(); go(-1); startAutoplay(); }));
+            [next, nextOv].forEach(b=> b && b.addEventListener('click', ()=>{ stopAutoplay(); go(1); startAutoplay(); }));
+
+            // Transition end to wrap
+            track.addEventListener('transitionend', maybeWrap);
+
+            function setup(){
+              // Capturer les originaux une seule fois au montage
+              if (originalsCached.length === 0) {
+                originalsCached = Array.from(track.querySelectorAll('.mc-card'));
+              }
+              measure();
+              buildClones();
+              startAutoplay();
+            }
+
+            setup();
+            window.addEventListener('resize', ()=>{ measure(); setX(true); });
+
+            // Gérer la visibilité de l’onglet pour éviter la disparition/bug d’images
+            document.addEventListener('visibilitychange', ()=>{
+              if (document.hidden){
+                stopAutoplay();
+              } else {
+                // Au retour : re-mesurer et reconstruire proprement à partir des originaux
+                measure();
+                buildClones();
+                startAutoplay();
+              }
+            });
+            // En cas de focus (certains navigateurs ne déclenchent pas visibilitychange dans tous les cas)
+            window.addEventListener('focus', ()=>{
+              measure();
+              setX(true);
+              if (!autoplay) startAutoplay();
+            });
+          })();
+        </script>
+      </div>
+    </section>
+
+    
+
+    <!-- TÉLÉCHARGEMENTS -->
+    <section id="downloads" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-brand-navy">Téléchargements</h2>
+          <p class="mt-2 text-slate-600">Installation sécurisée via HTTPS. Choisissez votre plateforme pour commencer.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <!-- Windows -->
+          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+            <div class="flex items-start gap-4 h-full">
+              <div class="flex-shrink-0">
+                <!-- Windows image icon -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOqmME0MT6mVo53XSMoTyrb559sgj3PX1a5NL0_jW_dOPbm0HZJmQn4GrKQSj0O30KZ8gZFIoS4IwTUtGrWbmCe9SyERCtWmvULXtwFXNer4Pid1CZZqJ_ldyiV0J7HE6PZzKSu3du_e-4CaqyGANNTlRhyoVUUfI0v8z6bQhcpnvTqxIFyA6fFMnOBPP7/s320/windows.png" alt="Windows" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+              </div>
+              <div class="flex-1 flex flex-col">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-semibold text-brand-navy">Windows</h3>
+                  <span class="text-xs rounded-full bg-slate-100 text-slate-700 px-2 py-0.5">EXE</span>
+                </div>
+                <p class="text-slate-600 text-sm mt-1">Version 4.0.0 • Installe VC++ et WebView2 si absents.</p>
+                <div class="mt-auto pt-4 flex items-center gap-3">
+                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-teal text-white font-medium shadow hover:opacity-95" href="https://epl-3-the-brief.web.app/windows/v4/BrieFly_Setup_4.0.0.exe" rel="noopener noreferrer" aria-label="Télécharger l’installateur Windows">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Télécharger EXE</span>
+                  </a>
+                </div>
+                <div class="mt-2 text-xs text-slate-500">Windows 10/11 (64‑bit) • Droits admin requis lors de la première installation</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- macOS -->
+          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+            <div class="flex items-start gap-4 h-full">
+              <div class="flex-shrink-0">
+                <!-- macOS image icon -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAeF9j2e0U6Qh-4K_Ns34cY8AChKZVf78tyk9zlPbdKkmkLiDz4-pHl4GW2HE8SlJy5kcKeX73TuZmV_eh6ig1YJZru_-Po8F-2hnQ643mVSE67Irq_693BzekVZW0B7rzk_j4PRCRtfNrezDqdc7LUDgtaiDpzBJiCneYR6CLRw8D_J1O-0MCvWEL6bqI/s320/mac.png" alt="macOS" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+              </div>
+              <div class="flex-1 flex flex-col">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-semibold text-brand-navy">macOS</h3>
+                  <span class="text-xs rounded-full bg-slate-100 text-slate-700 px-2 py-0.5">ZIP</span>
+                </div>
+                <p class="text-slate-600 text-sm mt-1">Version 4.0.0 • Ouvrez le ZIP → déplacez dans Applications. Si bloqué, autorisez dans Réglages Système → Confidentialité.</p>
+                <div class="mt-auto pt-4 flex items-center gap-3">
+                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white border border-gray-200 text-slate-700 font-medium hover:bg-gray-50" href="https://epl-3-the-brief.web.app/macos/v4/BrieFly-macOS-4.0.0.zip" rel="noopener noreferrer" aria-label="Télécharger l’archive macOS">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Télécharger ZIP</span>
+                  </a>
+                </div>
+                <div class="mt-2 text-xs text-slate-500">macOS 12+ (Intel & Apple Silicon) • Gatekeeper peut demander une autorisation au premier lancement</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Android -->
+          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+            <div class="flex items-start gap-4 h-full">
+              <div class="flex-shrink-0">
+                <!-- Android image icon -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJLKbbQs0KNrOh6gtxqY0xAwez35EEG0ulEGWj1pA5VLUaqqoGaHudZHitdrtMMcWZd6tHIDuM_evnGg1kSCrg4jJ8hJ15pLI7A_ZQyQGX-nyuvzkDlOjBnGv02zzzFRdjb5MdwpwMwWoMlA3dIVk7Vl5GGe8k5p0iOA_7vRooLgmwmik3rgPDKO5JkGkV/s320/android.png" alt="Android" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+              </div>
+              <div class="flex-1 flex flex-col">
+                <h3 class="font-semibold text-brand-navy">Android (Google Play)</h3>
+                <p class="text-slate-600 text-sm mt-1">Tests fermés en cours — le lien Play sera bientôt mis à jour.</p>
+                <div class="mt-auto pt-4 flex items-center gap-3">
+                  <span class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-dashed border-gray-300 text-slate-500 cursor-not-allowed select-none bg-white" aria-disabled="true">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Google Play (bientôt)</span>
+                  </span>
+                  <a class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-brand-teal text-brand-teal font-medium hover:bg-brand-teal/5" href="#contact">Demander un accès</a>
+                </div>
+                <div class="mt-2 text-xs text-slate-500">Android 8.0+ • Piste de test sur invitation</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-brand-navy">Tarifs</h2>
+          <p class="mt-3 text-slate-600">Des offres simples pour accéder à toutes les fonctionnalités de BrieFly.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <!-- Mensuel -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-brand-navy">Mensuel</h3>
+            </div>
+            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">50 MAD</div>
+            <p class="mt-2 text-slate-600 text-sm">Accès complet + support standard.</p>
+            <ul class="mt-4 text-slate-600 text-sm space-y-2">
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Support standard</li>
+            </ul>
+            <div class="mt-auto pt-5">
+              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-white border border-gray-200 text-slate-800 font-medium hover:bg-gray-50">Commencer</a>
+            </div>
+          </article>
+
+          <!-- Annuel (Most popular) -->
+          <article class="relative p-6 bg-white rounded-xl border-2 border-brand-teal shadow-md flex flex-col">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-xs bg-brand-teal text-white px-3 py-1 rounded-full shadow">Le plus choisi</span>
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-brand-navy">Annuel</h3>
+            </div>
+            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">200 MAD</div>
+            <p class="mt-2 text-slate-600 text-sm">Meilleure valeur. Aucune annonce et économies jusqu'à 75%.</p>
+            <ul class="mt-4 text-slate-600 text-sm space-y-2">
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aucune annonce diffusée</li>
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Économisez 75%</li>
+            </ul>
+            <div class="mt-auto pt-5">
+              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-brand-teal text-white font-semibold shadow hover:opacity-95">Choisir Annuel</a>
+            </div>
+          </article>
+
+          <!-- 6 Mois -->
+          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-brand-navy">6 Mois</h3>
+            </div>
+            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">100 MAD</div>
+            <p class="mt-2 text-slate-600 text-sm">Accès complet + support email. Économisez plus de 65%.</p>
+            <ul class="mt-4 text-slate-600 text-sm space-y-2">
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Support par email</li>
+              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Économisez +65%</li>
+            </ul>
+            <div class="mt-auto pt-5">
+              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-white border border-gray-200 text-slate-800 font-medium hover:bg-gray-50">Choisir 6 Mois</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-6 text-center text-xs text-slate-500">Les prix sont en MAD. Taxes éventuelles non incluses.</p>
+      </div>
+    </section>
+
+    
+
+    <!-- FAQ -->
+    <section id="faq" class="py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-extrabold text-brand-navy text-center">FAQ</h2>
+        <p class="mt-2 text-center text-slate-600">Tout ce qu’il faut savoir pour bien démarrer avec BrieFly.</p>
+        <div class="mt-6 space-y-3">
+          <!-- Offline -->
+          <details class="bg-white p-4 rounded border border-gray-100">
+            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
+              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Puis‑je utiliser BrieFly hors‑ligne ?
+            </summary>
+            <div class="mt-2 text-slate-600 text-sm">Oui. Les cartes et documents avion peuvent être téléchargés pour un usage hors‑ligne. Les METAR/TAF et NOTAMs nécessitent une connexion pour l’actualisation — les briefings mis en cache restent consultables.</div>
+          </details>
+
+          <!-- Platforms -->
+          <details class="bg-white p-4 rounded border border-gray-100">
+            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
+              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Quelles plateformes sont prises en charge ?
+            </summary>
+            <div class="mt-2 text-slate-600 text-sm">Windows (EXE), macOS (ZIP) et Android (test Google Play). iOS est prévu — abonnez‑vous aux mises à jour.</div>
+          </details>
+
+          <!-- Billing & payments -->
+          <details class="bg-white p-4 rounded border border-gray-100">
+            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
+              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 11h16" stroke="currentColor" stroke-width="2"/></svg>
+              Comment fonctionne la facturation et les paiements ?
+            </summary>
+            <div class="mt-2 text-slate-600 text-sm">
+              Sur desktop (Windows/macOS), le paiement s’effectue via <strong>PayPal</strong> ou <strong>virement bancaire</strong>.
+              Sur Android, BrieFly utilise la <strong>facturation Google Play</strong> (tests fermés pour le moment).
+              Vous pouvez annuler à tout moment depuis le canal d’achat correspondant.
+            </div>
+          </details>
+
+          <!-- Devices -->
+          <details class="bg-white p-4 rounded border border-gray-100">
+            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
+              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 4h18v12H3z" stroke="currentColor" stroke-width="2"/><path d="M8 20h8" stroke="currentColor" stroke-width="2"/></svg>
+              Combien d’appareils puis‑je utiliser avec mon compte ?
+            </summary>
+            <div class="mt-2 text-slate-600 text-sm">Limite : <strong>2 appareils maximum par utilisateur</strong>. Pour des besoins d’école/équipe, contactez‑nous pour des licences multi‑postes.</div>
+          </details>
+
+          <!-- Support -->
+          <details class="bg-white p-4 rounded border border-gray-100">
+            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
+              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 017 7v1h1a2 2 0 110 4h-1v1a7 7 0 11-14 0v-1H4a2 2 0 110-4h1V9a7 7 0 017-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Comment obtenir de l’assistance ?
+            </summary>
+            <div class="mt-2 text-slate-600 text-sm">Assistance par email rapide. Écrivez‑nous via <a class="text-brand-teal underline" href="#contact">Contact</a> pour toute question ou demande d’accès Android.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <div>
+            <h2 class="text-2xl font-extrabold text-brand-navy">Contact & Assistance</h2>
+            <p class="mt-3 text-slate-600">Nous répondons généralement sous <strong>24 h ouvrées</strong>. Pour les écoles de pilotage : partenariats, démos et déploiements multi‑postes.</p>
+
+            <div class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+              <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1">⏱️ <span>Délai moyen &lt; 24 h</span></span>
+              <a class="inline-flex items-center gap-2 rounded-full bg-brand-teal/10 text-brand-teal px-3 py-1 hover:bg-brand-teal/15" href="mailto:slw.dwc@gmail.com?subject=Signalement%20bug%20BrieFly">✉️ <span>slw.dwc@gmail.com</span></a>
+              <a class="inline-flex items-center gap-2 rounded-full bg-green-50 text-green-700 px-3 py-1 hover:bg-green-100" href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer">💬 <span>WhatsApp : +212 643 567 477</span></a>
+            </div>
+
+            <div class="mt-6 flex items-center gap-3">
+              <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-teal text-white font-medium" href="mailto:slw.dwc@gmail.com">Contacter l’assistance</a>
+              <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white font-medium hover:bg-emerald-700" href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.12 1.6 5.92L0 24l6.19-1.63A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a9.93 9.93 0 01-5.06-1.39l-.36-.21-3.66.97.98-3.57-.23-.37A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.2-7.35c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.52.15-.17.2-.29.31-.48.1-.19.05-.36-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.41 0 1.41 1.03 2.77 1.17 2.96.15.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+            <h3 class="font-semibold text-slate-800">Nous écrire</h3>
+            <p class="mt-2 text-slate-600 text-sm">Précisez l’appareil, l’OS, la version et une courte description. Nous revenons vers vous rapidement.</p>
+            <form action="mailto:slw.dwc@gmail.com" method="get" class="mt-4 space-y-3" aria-label="Formulaire de contact">
+              <div>
+                <label class="block text-sm text-slate-600" for="c-name">Votre nom</label>
+                <input id="c-name" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" type="text" name="name" placeholder="Votre nom" required />
+              </div>
+              <div>
+                <label class="block text-sm text-slate-600" for="c-email">Email</label>
+                <input id="c-email" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" type="email" name="email" placeholder="vous@exemple.com" required />
+              </div>
+              <div>
+                <label class="block text-sm text-slate-600" for="c-subject">Objet</label>
+                <select id="c-subject" name="subject" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2 text-slate-700">
+                  <option value="Support">Support</option>
+                  <option value="Partenariat">Partenariat / École</option>
+                  <option value="Bug">Signalement de bug</option>
+                  <option value="Suggestion">Suggestion</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm text-slate-600" for="c-message">Message</label>
+                <textarea id="c-message" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" name="message" rows="4" placeholder="Votre message…" required></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <p class="text-xs text-slate-500">En envoyant ce message, vous acceptez notre politique de confidentialité.</p>
+                <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-navy text-white font-medium">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="border-t border-gray-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="Icône BrieFly" class="h-10 w-10 rounded-md object-cover" />
+        <div>
+          <div class="font-semibold text-brand-navy">BrieFly</div>
+          <div class="text-sm text-slate-500">Version 4.0.0</div>
+        </div>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        Made with ❤️ by
+        <a class="text-brand-teal hover:underline" href="https://www.instagram.com/nassihsalah" target="_blank" rel="noopener noreferrer">NASSIH Salaheddine</a>
+      </div>
+
+      <div class="text-sm text-slate-500">&copy; <span id="year"></span> BrieFly — Tous droits réservés</div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: mobile nav, scrollspy, small accessibility helpers -->
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    navToggle && navToggle.addEventListener('click', function () {
+      const open = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      navToggle.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Close mobile when link clicked
+    document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }));
+
+    // Simple scrollspy: highlight nav links
+    const sections = ['home','features','screenshots','downloads','pricing','faq','privacy','contact'];
+    const navLinks = document.querySelectorAll('nav .nav-link');
+    function scrollSpy() {
+      let current = 'home';
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.35) current = id;
+      }
+      navLinks.forEach(a => {
+        if (a.getAttribute('href') === '#' + current) {
+          a.classList.add('text-brand-teal');
+          a.classList.remove('text-slate-700');
+          a.setAttribute('aria-current','true');
+        } else {
+          a.classList.remove('text-brand-teal');
+          a.classList.add('text-slate-700');
+          a.removeAttribute('aria-current');
+        }
+      });
+    }
+    document.addEventListener('scroll', scrollSpy, {passive:true});
+    window.addEventListener('load', scrollSpy);
+
+    // Make details keyboard toggle friendly
+    document.querySelectorAll('details summary').forEach(s => {
+      s.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          s.parentElement.open = !s.parentElement.open;
+        }
+      });
+    });
+
+    // Smooth in-page focusing for accessibility
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const id = this.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+          setTimeout(() => el.focus({preventScroll:true}), 400);
+        }
+      });
+    });
+    
+    // Ensure quote video autoplays endlessly and resumes on return to tab
+    (function(){
+      const v = document.getElementById('quote-video');
+      if (!v) return;
+      v.muted = true; // required for autoplay
+      v.loop = true;
+      v.playsInline = true;
+      function tryPlay(){
+        try {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        } catch (_) {}
+      }
+      window.addEventListener('load', tryPlay);
+      v.addEventListener('loadeddata', tryPlay);
+      v.addEventListener('canplay', tryPlay);
+      v.addEventListener('ended', ()=>{ v.currentTime = 0; tryPlay(); });
+      document.addEventListener('visibilitychange', ()=>{ if (!document.hidden) tryPlay(); });
+      window.addEventListener('focus', tryPlay);
+      ['pointerdown','touchstart','click'].forEach(ev => window.addEventListener(ev, function once(){ tryPlay(); window.removeEventListener(ev, once); }, { once:true, passive:true }));
+    })();
+  </script>
+
+  <!-- Developer TODOs: -->
+  <!--
+    - Replace hero background image with your licensed high-res image (update preload link too)
+    - Add high-resolution screenshots to /screenshots/{ifrviz.png, briefing.png, aircraft_docs.png, home.png}
+    - Insert GA4 snippet (replace G-XXXXXXX)
+    - Replace placeholder trust logos with real flight school logos
+    - Add real Google Play link when available
+    - Provide properly-sized favicons and apple-touch icons
+    - Optional: Add a modal for "What's new" pulling from /public/changelog.json (small fetch + modal)
+    - Run Lighthouse and aXe for accessibility and performance tuning (images, caching, sizes)
+  -->
+
+</body>
+</html>
