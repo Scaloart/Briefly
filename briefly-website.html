@@ -6,7 +6,7 @@
   <title>BrieFly</title>
 
   <!-- SEO -->
-  <meta name="description" content="BrieFly —ffffffffffffff All You Need To Fly. Professional IFR charts, DA40/DA42 docs, aerodrome directory and automated preflight briefings for student and CPL/IR pilots." />
+  <meta name="description" content="BrieFly — All You Need To Fly. Professional IFR charts, DA40/DA42 docs, aerodrome directory and automated preflight briefings for student and CPL/IR pilots." />
   <link rel="canonical" href="https://yourdomain.example.com/" />
   <link rel="sitemap" href="/sitemap.xml" />
   <link rel="robots" content="index,follow" />
@@ -1073,7 +1073,7 @@
       });
     });
     
-    // Preloader: wait for window load (images), then ensure videos can play through
+    // Preloader: wait only for above-the-fold visuals (header/logo, hero, quote video)
     (function(){
       const pre = document.getElementById('site-preloader');
       function hidePreloader(){
@@ -1082,23 +1082,39 @@
         setTimeout(()=> pre.remove(), 320);
         document.body.classList.remove('overflow-y-hidden');
       }
-      window.addEventListener('load', () => {
-        const videos = Array.from(document.querySelectorAll('video'));
-        if (videos.length === 0){ hidePreloader(); return; }
+      // When DOM is ready, begin tracking essential assets
+      document.addEventListener('DOMContentLoaded', () => {
+        const essentialImgs = Array.from(document.querySelectorAll('header img, #home img'));
+        const quoteVideo = document.getElementById('quote-video');
+
         let remaining = 0;
-        const markDone = () => { remaining--; if (remaining <= 0) hidePreloader(); };
-        videos.forEach(v => {
-          // readyState >= 3 means HAVE_FUTURE_DATA (good enough) / canplaythrough will still fire if available
-          if (v.readyState >= 3){ return; }
+        const done = () => { remaining--; if (remaining <= 0) hidePreloader(); };
+
+        // Images in header + hero
+        essentialImgs.forEach(img => {
+          if (!img) return;
+          if (img.complete) return; // already loaded
           remaining++;
-          const doneOnce = () => { v.removeEventListener('canplaythrough', doneOnce); v.removeEventListener('error', doneOnce); markDone(); };
-          v.addEventListener('canplaythrough', doneOnce, { once:true });
-          v.addEventListener('error', doneOnce, { once:true });
+          const onEnd = () => { img.removeEventListener('load', onEnd); img.removeEventListener('error', onEnd); done(); };
+          img.addEventListener('load', onEnd, { once:true });
+          img.addEventListener('error', onEnd, { once:true });
         });
-        // If all were already ready, remaining will be 0
+
+        // Quote video: wait for 'canplay' (first frame ready), not full canplaythrough
+        if (quoteVideo) {
+          if (quoteVideo.readyState < 2) { // HAVE_CURRENT_DATA
+            remaining++;
+            const onVideo = () => { quoteVideo.removeEventListener('canplay', onVideo); quoteVideo.removeEventListener('error', onVideo); done(); };
+            quoteVideo.addEventListener('canplay', onVideo, { once:true });
+            quoteVideo.addEventListener('error', onVideo, { once:true });
+          }
+        }
+
+        // If nothing to wait for, release immediately
         if (remaining === 0) hidePreloader();
-        // Safety timeout in case some media never reaches canplaythrough
-        setTimeout(hidePreloader, 10000);
+
+        // Safety timeout so users aren't blocked too long (e.g., slow networks)
+        setTimeout(hidePreloader, 3500);
       });
     })();
     
