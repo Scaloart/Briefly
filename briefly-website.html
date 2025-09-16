@@ -104,7 +104,19 @@
   -->
 
 </head>
-<body class="bg-white text-slate-800 antialiased font-sans">
+<body class="bg-white text-slate-800 antialiased font-sans overflow-y-hidden">
+
+  <!-- Preloader overlay -->
+  <div id="site-preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white transition-opacity duration-300">
+    <div class="flex items-center gap-3">
+      <svg class="h-8 w-8 text-brand-teal animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+      </svg>
+      <span class="text-slate-600">Chargement…</span>
+    </div>
+    <p class="mt-2 text-xs text-slate-400">Veuillez patienter pendant le chargement des médias.</p>
+  </div>
 
   <!-- Passer au contenu principal -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-teal text-white px-3 py-2 rounded">Aller au contenu principal</a>
@@ -1060,6 +1072,35 @@
         }
       });
     });
+    
+    // Preloader: wait for window load (images), then ensure videos can play through
+    (function(){
+      const pre = document.getElementById('site-preloader');
+      function hidePreloader(){
+        if (!pre) return;
+        pre.classList.add('opacity-0','pointer-events-none');
+        setTimeout(()=> pre.remove(), 320);
+        document.body.classList.remove('overflow-y-hidden');
+      }
+      window.addEventListener('load', () => {
+        const videos = Array.from(document.querySelectorAll('video'));
+        if (videos.length === 0){ hidePreloader(); return; }
+        let remaining = 0;
+        const markDone = () => { remaining--; if (remaining <= 0) hidePreloader(); };
+        videos.forEach(v => {
+          // readyState >= 3 means HAVE_FUTURE_DATA (good enough) / canplaythrough will still fire if available
+          if (v.readyState >= 3){ return; }
+          remaining++;
+          const doneOnce = () => { v.removeEventListener('canplaythrough', doneOnce); v.removeEventListener('error', doneOnce); markDone(); };
+          v.addEventListener('canplaythrough', doneOnce, { once:true });
+          v.addEventListener('error', doneOnce, { once:true });
+        });
+        // If all were already ready, remaining will be 0
+        if (remaining === 0) hidePreloader();
+        // Safety timeout in case some media never reaches canplaythrough
+        setTimeout(hidePreloader, 10000);
+      });
+    })();
     
     // Ensure quote video autoplays endlessly and resumes on return to tab
     (function(){
