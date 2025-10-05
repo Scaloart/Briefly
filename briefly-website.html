@@ -151,25 +151,31 @@
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-teal text-white px-3 py-2 rounded">Aller au contenu principal</a>
 
   <!-- Sticky top nav -->
-  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200/70">
+  <header class="sticky top-0 z-50 border-b shadow-sm" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%); backdrop-filter: blur(12px); border-color: rgba(226,232,240,0.8);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Brand -->
         <div class="flex items-center gap-3">
           <a href="#home" class="group flex items-center gap-3" aria-label="Accueil BrieFly">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="BrieFly logo" class="h-11 w-11 rounded-md object-cover shadow-sm transition group-hover:scale-[1.02]" />
-            <span class="font-extrabold tracking-tight text-brand-navy leading-tight text-2xl sm:text-3xl transition group-hover:opacity-90">BrieFly</span>
+            <div class="relative">
+              <div class="absolute inset-0 rounded-xl opacity-20 blur-md" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%);"></div>
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="BrieFly logo" class="relative h-12 w-12 rounded-xl object-cover shadow-lg transition group-hover:scale-105" />
+            </div>
+            <div>
+              <span class="font-black tracking-tight leading-tight text-2xl sm:text-3xl transition group-hover:opacity-90" style="background: linear-gradient(135deg, #0B1221 0%, #009688 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">BrieFly</span>
+              <div class="text-xs font-semibold" style="color: #009688;">All You Need To Fly</div>
+            </div>
           </a>
         </div>
 
         <!-- Navigation bureau -->
-        <nav class="hidden md:flex md:items-center md:gap-6" aria-label="Primary navigation">
-          <a href="#features" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Fonctionnalités</a>
-          <a href="#screenshots" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Captures</a>
-          <a href="#downloads" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Téléchargements</a>
-          <a href="#pricing" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Tarifs</a>
-          <a href="#faq" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">FAQ</a>
-          <a href="#contact" class="text-sm font-medium text-slate-700 hover:text-brand-teal hover:underline underline-offset-4 decoration-brand-teal/60 focus:outline-none">Contact</a>
+        <nav class="hidden md:flex md:items-center md:gap-1" aria-label="Primary navigation">
+          <a href="#features" class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-all" style="color: #475569;">Fonctionnalités</a>
+          <a href="#screenshots" class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-all" style="color: #475569;">Captures</a>
+          <a href="#downloads" class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-all" style="color: #475569;">Téléchargements</a>
+          <a href="#pricing" class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-all" style="color: #475569;">Tarifs</a>
+          <a href="#faq" class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-all" style="color: #475569;">FAQ</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); color: #ffffff;">Contact</a>
         </nav>
 
         <!-- Actions -->
@@ -199,7 +205,7 @@
   <main id="main" class="focus:outline-none">
 
     <!-- HERO -->
-    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-50/60 to-white">
+    <section id="home" class="relative overflow-hidden" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
       <!-- Clean background: no image overlay to avoid white cast behind transparent PNG -->
       <div class="absolute inset-0"></div>
 
@@ -233,14 +239,34 @@
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16 items-center">
           <div class="lg:col-span-6 xl:col-span-6 xl:pr-8">
-            <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-800 text-xs font-medium shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 text-emerald-600"><path fill-rule="evenodd" d="M12 2.25c-.41 0-.82.084-1.2.25L5.1 4.59A2.25 2.25 0 003.75 6.6v4.83c0 5.327 3.407 10.137 8.5 11.82 5.093-1.683 8.5-6.493 8.5-11.82V6.6a2.25 2.25 0 00-1.35-2.01l-5.7-2.09c-.38-.166-.79-.25-1.2-.25zm3.28 7.03a.75.75 0 10-1.06-1.06l-3.97 3.97-1.72-1.72a.75.75 0 10-1.06 1.06l2.25 2.25a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg>
-              Approuvé par des élèves et des pilotes licenciés
-            </p>
-            <h1 class="mt-3 text-5xl sm:text-6xl font-black tracking-tight text-brand-navy leading-tight">BrieFly</h1>
-            <p class="mt-3 text-2xl text-slate-800 font-semibold">All You Need To Fly — cartes IFR, documents avion, données aérodromes et briefings pré‑vol rapides dans une application claire.</p>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold shadow-lg animate-pulse" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; border: 2px solid rgba(255,255,255,0.3);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M12 2.25c-.41 0-.82.084-1.2.25L5.1 4.59A2.25 2.25 0 003.75 6.6v4.83c0 5.327 3.407 10.137 8.5 11.82 5.093-1.683 8.5-6.493 8.5-11.82V6.6a2.25 2.25 0 00-1.35-2.01l-5.7-2.09c-.38-.166-.79-.25-1.2-.25zm3.28 7.03a.75.75 0 10-1.06-1.06l-3.97 3.97-1.72-1.72a.75.75 0 10-1.06 1.06l2.25 2.25a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg>
+              ✨ Approuvé par des élèves et pilotes licenciés
+            </div>
+            <h1 class="mt-6 text-6xl sm:text-7xl font-black tracking-tight leading-tight" style="background: linear-gradient(135deg, #0B1221 0%, #009688 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">BrieFly</h1>
+            <p class="mt-5 text-2xl sm:text-3xl font-bold" style="color: #1e293b; line-height: 1.4;">All You Need To Fly</p>
+            <p class="mt-4 text-lg sm:text-xl" style="color: #64748b; line-height: 1.6;">Cartes IFR, documents avion, données aérodromes et briefings pré-vol rapides dans une application claire et professionnelle.</p>
 
-            <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">Conçue pour les élèves et pilotes CPL/IR ainsi que les écoles de pilotage. Moins de temps à chercher, plus de temps à préparer des vols sûrs et efficaces.</p>
+            <div class="mt-8 flex flex-wrap gap-6">
+              <div class="flex items-center gap-2">
+                <div class="p-2 rounded-lg" style="background-color: #009688;">
+                  <svg class="h-5 w-5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="text-sm font-bold" style="color: #0B1221;">Élèves & CPL/IR</div>
+                  <div class="text-xs" style="color: #64748b;">Formation complète</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="p-2 rounded-lg" style="background-color: #1e40af;">
+                  <svg class="h-5 w-5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="text-sm font-bold" style="color: #0B1221;">Écoles de pilotage</div>
+                  <div class="text-xs" style="color: #64748b;">Déploiement multi-postes</div>
+                </div>
+              </div>
+            </div>
 
             <!-- Boutons CTA retirés comme demandé -->
 
@@ -269,25 +295,30 @@
     </section>
 
     <!-- BEFORE vs AFTER: Dossier de vol -->
-    <section class="py-16 bg-gradient-to-b from-white to-slate-50 border-y border-gray-100" aria-labelledby="compare">
+    <section class="py-20 border-y border-gray-100" style="background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);" aria-labelledby="compare">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Two-column layout: left (title + text + cards), right (phone screenshot) -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch md:min-h-[640px]">
           <!-- Left: Title + description + comparison cards -->
           <div class="md:col-span-7 flex flex-col h-full">
-            <div class="flex items-center gap-3">
-              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-teal/10 text-brand-teal">
-                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-              <h2 id="compare" class="text-2xl sm:text-3xl font-extrabold tracking-tight text-brand-navy">DOSSIER DE VOL</h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-4 rounded-xl shadow-lg" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%);">
+                <svg class="h-8 w-8" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h2 id="compare" class="text-3xl sm:text-4xl font-black tracking-tight" style="color: #0B1221;">DOSSIER DE VOL</h2>
+                <p class="text-sm font-semibold" style="color: #009688;">Tout-en-un • Rapide • Fiable</p>
+              </div>
             </div>
             <p class="mt-3 text-slate-600 max-w-3xl">Planification, briefing et dépôt au même endroit : METAR/TAF/SIGMET, TEMSI, WINTEM, NOTAM, carnet de navigation, masse &amp; centrage et plan de vol — le tout réuni dans un flux clair et fiable.</p>
             <div class="mt-6 space-y-6 flex-1">
             <!-- BEFORE -->
-            <div class="rounded-2xl border border-gray-200 bg-white/95 p-6 shadow-sm">
-              <div class="flex items-center gap-2 text-slate-800 font-semibold">
-                <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-red-50 text-red-600">✕</span>
-                <span>Avant (manuel, fragmenté)</span>
+            <div class="rounded-2xl border-2 p-6 shadow-lg" style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border-color: #ef4444;">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-lg" style="background-color: #dc2626;">
+                  <svg class="h-5 w-5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </div>
+                <span class="text-lg font-bold" style="color: #7f1d1d;">Avant (manuel, fragmenté)</span>
               </div>
               <ul class="mt-5 space-y-3 text-sm text-slate-700">
                 <li class="flex items-start gap-3">
@@ -318,10 +349,12 @@
             </div>
 
             <!-- AFTER -->
-            <div class="rounded-2xl border border-gray-200 bg-white/95 p-6 shadow-sm">
-              <div class="flex items-center gap-2 text-slate-800 font-semibold">
-                <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-emerald-50 text-emerald-600">✓</span>
-                <span>Après (BrieFly, unifié)</span>
+            <div class="rounded-2xl border-2 p-6 shadow-lg" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-color: #10b981;">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-lg" style="background-color: #10b981;">
+                  <svg class="h-5 w-5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span class="text-lg font-bold" style="color: #064e3b;">Après (BrieFly, unifié)</span>
               </div>
               <ul class="mt-5 space-y-3 text-sm text-slate-700">
                 <li class="flex items-start gap-3">
@@ -383,23 +416,25 @@
     </section>
 
     <!-- FONCTIONNALITÉS -->
-    <section id="features" class="py-12">
+    <section id="features" class="py-20" style="background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl font-extrabold text-brand-navy">Des fonctionnalités pour gagner du temps et réduire les risques</h2>
-          <p class="mt-3 text-slate-600">Chaque module de BrieFly simplifie la préparation, soutient les bonnes procédures et rend les briefings reproductibles et fiables.</p>
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-block px-4 py-2 rounded-full mb-4" style="background-color: #dbeafe; color: #1e40af;">
+            <span class="text-sm font-bold">🚀 FONCTIONNALITÉS</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black tracking-tight" style="color: #0B1221;">Tout ce dont vous avez besoin</h2>
+          <p class="mt-5 text-xl" style="color: #64748b;">Des outils puissants pour des briefings rapides, précis et professionnels</p>
         </div>
 
         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Carte : Météo -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-brand-teal/10 text-brand-teal rounded-lg">
-                <!-- Weather icon -->
-                <svg class="h-6 w-6 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7l6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M3 15h4l3 7 4-14 3 7h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="8" r="3" fill="currentColor"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">Briefings météo, comme il faut</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Briefings météo</h3>
                 <p class="mt-2 text-slate-600 text-sm">METAR/TAF/SIGMET normalisés pour un balayage rapide. TEMSI et WINTEM alignés sur votre route.</p>
                 <ul class="mt-3 text-slate-500 text-sm space-y-1">
                   <li>Décodage et formatage cohérents</li>
@@ -410,14 +445,13 @@
           </article>
 
           <!-- Carte : NOTAMs -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-brand-gold/10 text-brand-gold rounded-lg">
-                <!-- NOTAM icon -->
-                <svg class="h-6 w-6 text-brand-gold" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" fill="currentColor"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">NOTAMs clairs et triés</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">NOTAMs clairs et triés</h3>
                 <p class="mt-2 text-slate-600 text-sm">Filtrés et regroupés par route/aérodrome pour ne garder que l’essentiel.</p>
                 <ul class="mt-3 text-slate-500 text-sm space-y-1">
                   <li>Filtres et pertinence configurables</li>
@@ -428,14 +462,13 @@
           </article>
 
           <!-- Carte : Dossier de vol -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-blue-50 text-blue-600 rounded-lg">
-                <!-- Dossier icon -->
-                <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">Dossier de vol de bout en bout</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Dossier de vol de bout en bout</h3>
                 <p class="mt-2 text-slate-600 text-sm">Un seul flux pour la météo, les NOTAMs, le log de nav, le centrage et le plan de vol — conçu pour des briefings reproductibles.</p>
                 <ul class="mt-3 text-slate-500 text-sm space-y-1">
                   <li>Saisies et vérifications structurées</li>
@@ -446,42 +479,39 @@
           </article>
 
           <!-- Carte : Prévisualisation du plan de vol -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-indigo-50 text-indigo-600 rounded-lg">
-                <!-- Preview icon -->
-                <svg class="h-6 w-6 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h12M3 17h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="2"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">Prévisualisation du plan de vol</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Prévisualisation du plan de vol</h3>
                 <p class="mt-2 text-slate-600 text-sm">Validez les détails avant export ou dépôt grâce à une prévisualisation intégrée.</p>
               </div>
             </div>
           </article>
 
           <!-- Carte : Aérodromes & cartes -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-gray-50 text-gray-600 rounded-lg">
-                <!-- Aerodrome icon -->
-                <svg class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #64748b 0%, #475569 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">Aérodromes et cartes</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Aérodromes et cartes</h3>
                 <p class="mt-2 text-slate-600 text-sm">Répertoire d’aérodromes avec visionneuse de cartes et favoris pour vos terrains les plus utilisés.</p>
               </div>
             </div>
           </article>
 
           <!-- Carte : DA40/DA42 + Garmin -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             <div class="flex items-start gap-4">
-              <div class="p-3 bg-brand-teal/10 text-brand-teal rounded-lg">
-                <!-- Docs icon -->
-                <svg class="h-6 w-6 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h8" stroke="currentColor" stroke-width="1.6"/></svg>
+              <div class="p-4 rounded-xl shadow-md" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+                <svg class="h-7 w-7" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-brand-navy">Documentation DA40/DA42 + Garmin</h3>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Documentation DA40/DA42 + Garmin</h3>
                 <p class="mt-2 text-slate-600 text-sm">Docs avion et références Garmin, avec visionneuse photo/PDF et playlists de formation.</p>
               </div>
             </div>
@@ -492,100 +522,105 @@
     </section>
 
     <!-- CAPTURES D’ÉCRAN -->
-    <section id="screenshots" class="py-12 bg-gray-50">
+    <section id="screenshots" class="py-20" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-4">
-          <div>
-            <h2 class="text-3xl font-extrabold text-brand-navy">Captures d’écran</h2>
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 rounded-full mb-4" style="background-color: #dbeafe; color: #1e40af;">
+            <span class="text-sm font-bold">📸 CAPTURES</span>
           </div>
-          <div class="hidden md:flex items-center gap-2">
-            <button id="mc-prev" class="h-10 w-10 inline-flex items-center justify-center rounded-md border border-gray-200 bg-white text-slate-700 hover:bg-gray-50" aria-label="Précédent">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button id="mc-next" class="h-10 w-10 inline-flex items-center justify-center rounded-md border border-gray-200 bg-white text-slate-700 hover:bg-gray-50" aria-label="Suivant">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
+          <h2 class="text-4xl sm:text-5xl font-black tracking-tight" style="color: #0B1221;">Découvrez l'interface</h2>
+          <p class="mt-5 text-xl" style="color: #64748b;">Une expérience utilisateur conçue pour les pilotes</p>
+        </div>
+        <div class="flex items-center justify-center gap-3 mb-8">
+          <button id="mc-prev" class="h-12 w-12 inline-flex items-center justify-center rounded-xl shadow-lg hover:shadow-xl transition-all" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); color: #ffffff;" aria-label="Précédent">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button id="mc-next" class="h-12 w-12 inline-flex items-center justify-center rounded-xl shadow-lg hover:shadow-xl transition-all" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); color: #ffffff;" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
 
-        <div id="mc-viewport" class="relative mt-6 overflow-hidden">
+        <div id="mc-viewport" class="relative overflow-hidden rounded-3xl" style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 2rem;">
           <!-- edge fades -->
-          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 to-transparent"></div>
-          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 to-transparent"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-100 to-transparent z-10"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-100 to-transparent z-10"></div>
           <div id="mc-track" class="flex items-center gap-4 will-change-transform">
             <!-- Cards (user images). Fixed rounded 16:9 thumbnails -->
             <div class="mc-card flex-none group">
-              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
-                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi0b94TVQn6pSzbx5NA7F1kcxbMMwAXKfPTRCv6-I-LQ49PejOJvlSC5j-wWqJ8DmfN3yfJ85MzWjw2TZ8bfO6uzaxHbYEwRrXZcct_JrqZrGtzNyf63Z9w9xgfrwaBxusWDsSioKMseFPLAT36G3Egc3g4sGsNuYRmQcbYQa4GqpeGWOnr4qJSeF_gSNAe=s16000" alt="DA40 NG" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              <div class="mc-click rounded-2xl w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi0b94TVQn6pSzbx5NA7F1kcxbMMwAXKfPTRCv6-I-LQ49PejOJvlSC5j-wWqJ8DmfN3yfJ85MzWjw2TZ8bfO6uzaxHbYEwRrXZcct_JrqZrGtzNyf63Z9w9xgfrwaBxusWDsSioKMseFPLAT36G3Egc3g4sGsNuYRmQcbYQa4GqpeGWOnr4qJSeF_gSNAe=s16000" alt="DA40 NG" class="w-full h-[157px] sm:h-[191px] md:h-[214px] lg:h-[236px] object-cover transition-all duration-500 group-hover:scale-105" />
               </div>
-              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-                  <!-- Aircraft icon -->
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <!-- fuselage -->
-                    <path d="M3 12h14" />
-                    <!-- wings -->
-                    <path d="M7 9l7 3-7 3" />
-                    <!-- tail -->
-                    <path d="M5 10v4" />
-                    <!-- nose triangle -->
-                    <path d="M17 12l4-2v4z" />
-                  </svg>
+              <div class="mt-4 flex items-center justify-center gap-2 text-base font-bold" style="color: #0B1221;">
+                  <div class="p-1.5 rounded-lg" style="background-color: #009688;">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" style="color: #ffffff;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 12h14" />
+                      <path d="M7 9l7 3-7 3" />
+                      <path d="M5 10v4" />
+                      <path d="M17 12l4-2v4z" />
+                    </svg>
+                  </div>
                   <span>DA40 NG</span>
               </div>
             </div>
             <div class="mc-card flex-none group">
-              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYO5gXJG6Xnk3kma65eH-lM33ug1GotsKTiQnHA68QBMII0a-Cz9FJCxTpVyl2MVEoxfIKarllpB4JFQ9s_aAs2zxMXZsG6CdZQfLeyIfhhECQlQjpKUJjjliKzsAtTNK4pQ3zlpQtZfGsJ0SJrq09UPg4UlBWRXmKfxs1splLuBBlUlPpO6m23SD9way/s16000/Nouveau%20projet%20(2).png" alt="Aviation English" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              <div class="mc-click rounded-2xl w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYO5gXJG6Xnk3kma65eH-lM33ug1GotsKTiQnHA68QBMII0a-Cz9FJCxTpVyl2MVEoxfIKarllpB4JFQ9s_aAs2zxMXZsG6CdZQfLeyIfhhECQlQjpKUJjjliKzsAtTNK4pQ3zlpQtZfGsJ0SJrq09UPg4UlBWRXmKfxs1splLuBBlUlPpO6m23SD9way/s16000/Nouveau%20projet%20(2).png" alt="Aviation English" class="w-full h-[157px] sm:h-[191px] md:h-[214px] lg:h-[236px] object-cover transition-all duration-500 group-hover:scale-105" />
               </div>
-              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-                  <!-- Language (globe) icon -->
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M3 12h18" />
-                    <path d="M12 3a15 15 0 0 1 0 18" />
-                    <path d="M12 3a15 15 0 0 0 0 18" />
-                  </svg>
+              <div class="mt-4 flex items-center justify-center gap-2 text-base font-bold" style="color: #0B1221;">
+                  <div class="p-1.5 rounded-lg" style="background-color: #1e40af;">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" style="color: #ffffff;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18" />
+                      <path d="M12 3a15 15 0 0 1 0 18" />
+                      <path d="M12 3a15 15 0 0 0 0 18" />
+                    </svg>
+                  </div>
                   <span>Aviation English</span>
               </div>
             </div>
             <div class="mc-card flex-none group">
-              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8y2tk6fafXAHf5aXkcfs4gNLYLP6HXAhfMoXbqSnq4lRTAxiYC_yjv4V85S7xpcsLpqkzqt0b5dTJYbH2wXvRK5g8q9TjvKwrmERIFm1Zh2zECW-vDtvRXB9G7RFgj8Sqwg4uED0ZUdGk3_ZlNR_IFWM0GaNQRcEGIw7Ud4ATPx4e-IudOI9TntMcHGI/s16000/Nouveau%20projet%20(1).png" alt="Annexes OACI" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              <div class="mc-click rounded-2xl w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8y2tk6fafXAHf5aXkcfs4gNLYLP6HXAhfMoXbqSnq4lRTAxiYC_yjv4V85S7xpcsLpqkzqt0b5dTJYbH2wXvRK5g8q9TjvKwrmERIFm1Zh2zECW-vDtvRXB9G7RFgj8Sqwg4uED0ZUdGk3_ZlNR_IFWM0GaNQRcEGIw7Ud4ATPx4e-IudOI9TntMcHGI/s16000/Nouveau%20projet%20(1).png" alt="Annexes OACI" class="w-full h-[157px] sm:h-[191px] md:h-[214px] lg:h-[236px] object-cover transition-all duration-500 group-hover:scale-105" />
               </div>
-              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6z"/><path d="M9 8h6"/><path d="M9 12h6"/></svg>
+              <div class="mt-4 flex items-center justify-center gap-2 text-base font-bold" style="color: #0B1221;">
+                  <div class="p-1.5 rounded-lg" style="background-color: #f59e0b;">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" style="color: #ffffff;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6z"/><path d="M9 8h6"/><path d="M9 12h6"/></svg>
+                  </div>
                   <span>Annexes OACI</span>
               </div>
             </div>
             <div class="mc-card flex-none group">
-              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnEvJgl5kdTjUbU9W62cCbpXz9TNL1q6aTfcAg-6Ncxba2UjBY3Q5mSFTUkBQmawJTjj626ikFDr_hkFnzODMEBTYyKba3psHJropSNiR4a-FtI1d_lAK-HpxwTWWbdMHdB3RS2lDNxiPC0k3arJZFvdjXNBO9QziZGYjfYfPGIjYbUYk18lvUVZF50ttt/s16000/Nouveau%20projet%20(4).png" alt="Dossier de vol" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              <div class="mc-click rounded-2xl w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnEvJgl5kdTjUbU9W62cCbpXz9TNL1q6aTfcAg-6Ncxba2UjBY3Q5mSFTUkBQmawJTjj626ikFDr_hkFnzODMEBTYyKba3psHJropSNiR4a-FtI1d_lAK-HpxwTWWbdMHdB3RS2lDNxiPC0k3arJZFvdjXNBO9QziZGYjfYfPGIjYbUYk18lvUVZF50ttt/s16000/Nouveau%20projet%20(4).png" alt="Dossier de vol" class="w-full h-[157px] sm:h-[191px] md:h-[214px] lg:h-[236px] object-cover transition-all duration-500 group-hover:scale-105" />
               </div>
-              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-                  <!-- Meteo (cloud) icon -->
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11-1" />
-                  </svg>
+              <div class="mt-4 flex items-center justify-center gap-2 text-base font-bold" style="color: #0B1221;">
+                  <div class="p-1.5 rounded-lg" style="background-color: #8b5cf6;">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" style="color: #ffffff;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 16h10a4 4 0 0 0 0-8 6 6 0 0 0-11-1" />
+                    </svg>
+                  </div>
                   <span>Dossier de vol</span>
               </div>
             </div>
             <div class="mc-card flex-none group">
-              <div class="mc-click rounded-2xl w-[260px] sm:w-[320px] md:w-[360px] lg:w-[400px] overflow-hidden">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDHfZXdd8cc5HM0PswqRmq4RC_DHR8zLl9MZE0dJUFuF9ar36jpbNDvfs9o5T6uL-ZiNQTm3Y0HFZ0EswspeqVyI0oLKD6_ndYU5oVGxU9X5RmejADg73oMeEwQKOKu7vYV50D9LZUiqKbHRPfwITIZNm877dBiyleCNPqoxA13Gy-VTTz4ZRo-rzJOLWm/s16000/Nouveau%20projet%20(5).png" alt="Documents" class="w-full h-[146px] sm:h-[180px] md:h-[202px] lg:h-[225px] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+              <div class="mc-click rounded-2xl w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDHfZXdd8cc5HM0PswqRmq4RC_DHR8zLl9MZE0dJUFuF9ar36jpbNDvfs9o5T6uL-ZiNQTm3Y0HFZ0EswspeqVyI0oLKD6_ndYU5oVGxU9X5RmejADg73oMeEwQKOKu7vYV50D9LZUiqKbHRPfwITIZNm877dBiyleCNPqoxA13Gy-VTTz4ZRo-rzJOLWm/s16000/Nouveau%20projet%20(5).png" alt="Documents" class="w-full h-[157px] sm:h-[191px] md:h-[214px] lg:h-[236px] object-cover transition-all duration-500 group-hover:scale-105" />
               </div>
-              <div class="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-navy" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8"/><path d="M8 12h8"/></svg>
+              <div class="mt-4 flex items-center justify-center gap-2 text-base font-bold" style="color: #0B1221;">
+                  <div class="p-1.5 rounded-lg" style="background-color: #ec4899;">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" style="color: #ffffff;" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8"/><path d="M8 12h8"/></svg>
+                  </div>
                   <span>Documents</span>
               </div>
             </div>
           </div>
 
           <!-- Mobile overlay arrows -->
-          <button id="mc-prev-overlay" class="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 inline-flex items-center justify-center rounded-full bg-white/90 border border-gray-200 shadow md:hidden" aria-label="Précédent">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <button id="mc-prev-overlay" class="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 inline-flex items-center justify-center rounded-xl shadow-xl z-20" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); color: #ffffff;" aria-label="Précédent">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <button id="mc-next-overlay" class="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 inline-flex items-center justify-center rounded-full bg-white/90 border border-gray-200 shadow md:hidden" aria-label="Suivant">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <button id="mc-next-overlay" class="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 inline-flex items-center justify-center rounded-xl shadow-xl z-20" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); color: #ffffff;" aria-label="Suivant">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
 
@@ -756,72 +791,93 @@
     
 
     <!-- TÉLÉCHARGEMENTS -->
-    <section id="downloads" class="py-12">
+    <section id="downloads" class="py-20" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-extrabold text-brand-navy">Téléchargements</h2>
-          <p class="mt-2 text-slate-600">Installation sécurisée via HTTPS. Choisissez votre plateforme pour commencer.</p>
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-block px-4 py-2 rounded-full mb-4" style="background-color: #dbeafe; color: #1e40af;">
+            <span class="text-sm font-bold">💾 TÉLÉCHARGEMENTS</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black tracking-tight" style="color: #0B1221;">Téléchargez BrieFly</h2>
+          <p class="mt-5 text-xl" style="color: #64748b;">Installation sécurisée et rapide. Choisissez votre plateforme.</p>
         </div>
 
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <!-- Windows -->
-          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+          <div class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 h-full">
             <div class="flex items-start gap-4 h-full">
               <div class="flex-shrink-0">
-                <!-- Windows image icon -->
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOqmME0MT6mVo53XSMoTyrb559sgj3PX1a5NL0_jW_dOPbm0HZJmQn4GrKQSj0O30KZ8gZFIoS4IwTUtGrWbmCe9SyERCtWmvULXtwFXNer4Pid1CZZqJ_ldyiV0J7HE6PZzKSu3du_e-4CaqyGANNTlRhyoVUUfI0v8z6bQhcpnvTqxIFyA6fFMnOBPP7/s320/windows.png" alt="Windows" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+                <div class="p-4 rounded-2xl shadow-lg" style="background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);">
+                  <svg class="h-14 w-14" style="color: #ffffff;" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                </div>
               </div>
               <div class="flex-1 flex flex-col">
                 <div class="flex items-center gap-2">
-                  <h3 class="font-semibold text-brand-navy">Windows</h3>
-                  <span class="text-xs rounded-full bg-slate-100 text-slate-700 px-2 py-0.5">EXE</span>
+                  <h3 class="text-2xl font-bold" style="color: #0B1221;">Windows</h3>
+                  <span class="text-xs rounded-full font-bold px-3 py-1" style="background-color: #dbeafe; color: #1e40af;">EXE • 5.0.0</span>
                 </div>
-                <p class="text-slate-600 text-sm mt-1">Version 4.0.0 • Installe VC++ et WebView2 si absents.</p>
+                <p class="text-base mt-2" style="color: #64748b;">Installation complète avec dépendances automatiques</p>
+                <ul class="mt-3 space-y-2 text-sm" style="color: #64748b;">
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" style="color: #10b981;" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>VC++ Redistributable inclus</li>
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" style="color: #10b981;" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>WebView2 Runtime inclus</li>
+                </ul>
                 <div class="mt-auto pt-4 flex items-center gap-3">
-                  <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-teal text-white font-medium shadow hover:opacity-95" href="https://epl-3-the-brief.web.app/windows/v4/BrieFly_Setup_4.0.0.exe" rel="noopener noreferrer" aria-label="Télécharger l’installateur Windows">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <span>Télécharger EXE</span>
+                  <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all w-full" style="background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%); color: #ffffff;" href="https://epl-3-the-brief.web.app/windows/v5/BrieFly_Setup_5.0.0.exe" rel="noopener noreferrer" aria-label="Télécharger l'installateur Windows">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Télécharger pour Windows</span>
                   </a>
                 </div>
-                <div class="mt-2 text-xs text-slate-500">Windows 10/11 (64‑bit) • Droits admin requis lors de la première installation</div>
+                <div class="mt-3 text-xs" style="color: #94a3b8;">🖥️ Windows 10/11 (64-bit) • Droits admin requis</div>
               </div>
             </div>
           </div>
 
           <!-- macOS -->
-          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+          <div class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:border-gray-300 transition-all duration-300 h-full">
             <div class="flex items-start gap-4 h-full">
               <div class="flex-shrink-0">
-                <!-- macOS image icon -->
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAeF9j2e0U6Qh-4K_Ns34cY8AChKZVf78tyk9zlPbdKkmkLiDz4-pHl4GW2HE8SlJy5kcKeX73TuZmV_eh6ig1YJZru_-Po8F-2hnQ643mVSE67Irq_693BzekVZW0B7rzk_j4PRCRtfNrezDqdc7LUDgtaiDpzBJiCneYR6CLRw8D_J1O-0MCvWEL6bqI/s320/mac.png" alt="macOS" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+                <div class="p-4 rounded-2xl shadow-lg" style="background: linear-gradient(135deg, #000000 0%, #333333 100%);">
+                  <svg class="h-14 w-14" style="color: #ffffff;" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                </div>
               </div>
               <div class="flex-1 flex flex-col">
                 <div class="flex items-center gap-2">
-                  <h3 class="font-semibold text-brand-navy">macOS</h3>
-                  <span class="text-xs rounded-full bg-slate-100 text-slate-700 px-2 py-0.5">ZIP</span>
+                  <h3 class="text-2xl font-bold" style="color: #0B1221;">macOS</h3>
+                  <span class="text-xs rounded-full font-bold px-3 py-1" style="background-color: #f3f4f6; color: #6b7280;">ZIP • Bientôt</span>
                 </div>
-                <p class="text-slate-600 text-sm mt-1">Bientôt disponible — la version macOS est en cours de finalisation.</p>
+                <p class="text-base mt-2" style="color: #64748b;">Version macOS en cours de finalisation</p>
+                <ul class="mt-3 space-y-2 text-sm" style="color: #94a3b8;">
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Intel & Apple Silicon</li>
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>macOS 12+ compatible</li>
+                </ul>
                 <div class="mt-auto pt-4 flex items-center gap-3">
-                  <span class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-dashed border-gray-300 text-slate-500 cursor-not-allowed select-none bg-white" aria-disabled="true">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold border-2 border-dashed cursor-not-allowed select-none" style="border-color: #d1d5db; background-color: #f9fafb; color: #9ca3af;" aria-disabled="true">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                     <span>Bientôt disponible</span>
                   </span>
                 </div>
-                <div class="mt-2 text-xs text-slate-500">macOS 12+ (Intel & Apple Silicon) • Disponible prochainement</div>
+                <div class="mt-3 text-xs" style="color: #94a3b8;">🍎 Disponible prochainement</div>
               </div>
             </div>
           </div>
 
           <!-- Android -->
-          <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+          <div class="p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-lg hover:shadow-2xl hover:border-green-300 transition-all duration-300 h-full">
             <div class="flex items-start gap-4 h-full">
               <div class="flex-shrink-0">
-                <!-- Android image icon -->
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJLKbbQs0KNrOh6gtxqY0xAwez35EEG0ulEGWj1pA5VLUaqqoGaHudZHitdrtMMcWZd6tHIDuM_evnGg1kSCrg4jJ8hJ15pLI7A_ZQyQGX-nyuvzkDlOjBnGv02zzzFRdjb5MdwpwMwWoMlA3dIVk7Vl5GGe8k5p0iOA_7vRooLgmwmik3rgPDKO5JkGkV/s320/android.png" alt="Android" class="h-12 w-12 sm:h-14 sm:w-14 object-contain" loading="lazy" />
+                <div class="p-4 rounded-2xl shadow-lg" style="background: linear-gradient(135deg, #3ddc84 0%, #2ca05a 100%);">
+                  <svg class="h-14 w-14" style="color: #ffffff;" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85l1.84 3.18C4.8 11.16 3.5 13.84 3.5 16.5h17c0-2.66-1.3-5.34-2.9-7.02zM7 14.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>
+                </div>
               </div>
               <div class="flex-1 flex flex-col">
-                <h3 class="font-semibold text-brand-navy">Android (Google Play)</h3>
-                <p class="text-slate-600 text-sm mt-1">Tests fermés en cours — le lien Play sera bientôt mis à jour.</p>
+                <div class="flex items-center gap-2">
+                  <h3 class="text-2xl font-bold" style="color: #0B1221;">Android</h3>
+                  <span class="text-xs rounded-full font-bold px-3 py-1" style="background-color: #dcfce7; color: #16a34a;">Beta</span>
+                </div>
+                <p class="text-base mt-2" style="color: #64748b;">Tests fermés via Google Play</p>
+                <ul class="mt-3 space-y-2 text-sm" style="color: #94a3b8;">
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Android 8.0+</li>
+                  <li class="flex items-center gap-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Accès sur invitation</li>
+                </ul>
                 <div class="mt-auto pt-4 flex items-center gap-3">
                   <span class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-dashed border-gray-300 text-slate-500 cursor-not-allowed select-none bg-white" aria-disabled="true">
                     <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -839,208 +895,241 @@
     </section>
 
     <!-- PRICING -->
-    <section id="pricing" class="py-12 bg-gray-50">
+    <section id="pricing" class="py-16 bg-gradient-to-b from-white to-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-3xl font-extrabold text-brand-navy">Tarifs</h2>
-          <p class="mt-3 text-slate-600">Des offres simples pour accéder à toutes les fonctionnalités de BrieFly.</p>
+          <h2 class="text-4xl font-extrabold" style="color: #0B1221;">Tarifs</h2>
+          <p class="mt-4 text-lg" style="color: #475569;">Choisissez l'offre qui correspond à vos besoins. Accès complet à toutes les fonctionnalités.</p>
         </div>
 
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           <!-- Mensuel -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
             <div class="flex items-center justify-between">
-              <h3 class="text-lg font-semibold text-brand-navy">Mensuel</h3>
+              <h3 class="text-xl font-bold" style="color: #0B1221;">Mensuel</h3>
             </div>
-            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">50 MAD</div>
-            <p class="mt-2 text-slate-600 text-sm">Accès complet + support standard.</p>
+            <div class="mt-3">
+              <span class="text-4xl font-black" style="color: #0B1221;">50 MAD</span>
+              <span class="text-lg" style="color: #64748b;"> / mois</span>
+            </div>
+            <p class="mt-3 text-base" style="color: #64748b;">Parfait pour découvrir BrieFly</p>
             <ul class="mt-4 text-slate-600 text-sm space-y-2">
               <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
               <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Support standard</li>
             </ul>
             <div class="mt-auto pt-5">
-              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-white border border-gray-200 text-slate-800 font-medium hover:bg-gray-50">Commencer</a>
+              <a href="#downloads" style="background-color: #1e40af; color: #ffffff;" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">Commencer</a>
             </div>
           </article>
 
           <!-- Annuel (Most popular) -->
-          <article class="relative p-6 bg-white rounded-xl border-2 border-brand-teal shadow-md flex flex-col">
-            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-xs bg-brand-teal text-white px-3 py-1 rounded-full shadow">Le plus choisi</span>
+          <article class="relative p-8 rounded-2xl shadow-2xl flex flex-col transform scale-105" style="background: linear-gradient(135deg, #009688 0%, #00796b 100%); border: 3px solid #009688;">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-xs px-3 py-1 rounded-full shadow" style="background-color: #009688; color: #ffffff;">Le plus choisi</span>
             <div class="flex items-center justify-between">
-              <h3 class="text-lg font-semibold text-brand-navy">Annuel</h3>
+              <h3 class="text-xl font-bold" style="color: #ffffff;">Annuel</h3>
+              <span class="inline-block mt-1 px-2 py-0.5 text-xs font-semibold rounded" style="background-color: rgba(255,255,255,0.2); color: #ffffff;">ÉCONOMIE 75%</span>
             </div>
-            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">200 MAD</div>
-            <p class="mt-2 text-slate-600 text-sm">Meilleure valeur. Aucune annonce et économies jusqu'à 75%.</p>
-            <ul class="mt-4 text-slate-600 text-sm space-y-2">
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aucune annonce diffusée</li>
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Économisez 75%</li>
+            <div class="mt-3">
+              <span class="text-4xl font-black" style="color: #ffffff;">200 MAD</span>
+              <span class="text-lg" style="color: rgba(255,255,255,0.9);"> / an</span>
+            </div>
+            <p class="mt-3 text-base" style="color: rgba(255,255,255,0.95);">Le meilleur rapport qualité-prix</p>
+            <ul class="mt-6 space-y-3" style="color: rgba(255,255,255,0.95);">
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Aucune annonce diffusée</li>
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Support prioritaire</li>
             </ul>
             <div class="mt-auto pt-5">
-              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-brand-teal text-white font-semibold shadow hover:opacity-95">Choisir Annuel</a>
+              <a href="#downloads" style="background-color: #ffffff; color: #009688;" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all">Choisir Annuel</a>
             </div>
           </article>
 
           <!-- 6 Mois -->
-          <article class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
+          <article class="p-8 bg-white rounded-2xl border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
             <div class="flex items-center justify-between">
-              <h3 class="text-lg font-semibold text-brand-navy">6 Mois</h3>
+              <h3 class="text-xl font-bold" style="color: #0B1221;">6 Mois</h3>
             </div>
-            <div class="mt-2 text-3xl font-extrabold text-brand-navy tracking-tight">100 MAD</div>
-            <p class="mt-2 text-slate-600 text-sm">Accès complet + support email. Économisez plus de 65%.</p>
-            <ul class="mt-4 text-slate-600 text-sm space-y-2">
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Support par email</li>
-              <li class="flex items-start gap-2"><svg class="h-4 w-4 text-brand-teal mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Économisez +65%</li>
+            <div class="mt-3">
+              <span class="text-4xl font-black" style="color: #0B1221;">100 MAD</span>
+              <span class="text-lg" style="color: #64748b;"> / 6 mois</span>
+            </div>
+            <p class="mt-3 text-base" style="color: #64748b;">Idéal pour une formation complète</p>
+            <ul class="mt-6 space-y-3" style="color: #475569;">
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #009688;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accès complet à toutes les fonctionnalités</li>
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #009688;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Support par email</li>
+              <li class="flex items-start gap-2"><svg class="h-5 w-5 mt-0.5" style="color: #009688;" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Économisez +65%</li>
             </ul>
             <div class="mt-auto pt-5">
-              <a href="#downloads" class="inline-flex items-center justify-center w-full gap-2 px-5 py-2.5 rounded-md bg-white border border-gray-200 text-slate-800 font-medium hover:bg-gray-50">Choisir 6 Mois</a>
+              <a href="#downloads" style="background-color: #1e40af; color: #ffffff;" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all">Choisir 6 Mois</a>
             </div>
           </article>
         </div>
 
-        <p class="mt-6 text-center text-xs text-slate-500">Les prix sont en MAD. Taxes éventuelles non incluses.</p>
+        <div class="mt-12 text-center">
+          <p class="text-sm" style="color: #64748b;">💳 Paiement sécurisé via PayPal ou virement bancaire</p>
+          <p class="mt-2 text-xs" style="color: #94a3b8;">Les prix sont en MAD. Taxes éventuelles non incluses. Annulation possible à tout moment.</p>
+        </div>
       </div>
     </section>
 
     
 
     <!-- FAQ -->
-    <section id="faq" class="py-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-extrabold text-brand-navy text-center">FAQ</h2>
-        <p class="mt-2 text-center text-slate-600">Tout ce qu’il faut savoir pour bien démarrer avec BrieFly.</p>
-        <div class="mt-6 space-y-3">
+    <section id="faq" class="py-20" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 rounded-full mb-4" style="background-color: #dbeafe; color: #1e40af;">
+            <span class="text-sm font-bold">❓ FAQ</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black tracking-tight" style="color: #0B1221;">Questions fréquentes</h2>
+          <p class="mt-5 text-xl" style="color: #64748b;">Tout ce que vous devez savoir sur BrieFly</p>
+        </div>
+        <div class="space-y-4">
           <!-- Offline -->
-          <details class="bg-white p-4 rounded border border-gray-100">
-            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
-              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Puis‑je utiliser BrieFly hors‑ligne ?
+          <details class="group bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all">
+            <summary class="font-bold text-lg cursor-pointer flex items-center justify-between" style="color: #0B1221;">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg" style="background-color: #dbeafe;">
+                  <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Puis-je utiliser BrieFly hors-ligne ?</span>
+              </div>
+              <svg class="h-5 w-5 transition-transform group-open:rotate-180" style="color: #64748b;" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <div class="mt-2 text-slate-600 text-sm">Oui. Les cartes et documents avion peuvent être téléchargés pour un usage hors‑ligne. Les METAR/TAF et NOTAMs nécessitent une connexion pour l’actualisation — les briefings mis en cache restent consultables.</div>
+            <div class="mt-4 pl-14 text-base" style="color: #64748b;">Oui. Les cartes et documents avion peuvent être téléchargés pour un usage hors-ligne. Les METAR/TAF et NOTAMs nécessitent une connexion pour l'actualisation — les briefings mis en cache restent consultables.</div>
           </details>
 
           <!-- Platforms -->
-          <details class="bg-white p-4 rounded border border-gray-100">
-            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
-              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Quelles plateformes sont prises en charge ?
+          <details class="group bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all">
+            <summary class="font-bold text-lg cursor-pointer flex items-center justify-between" style="color: #0B1221;">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg" style="background-color: #dbeafe;">
+                  <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Quelles plateformes sont prises en charge ?</span>
+              </div>
+              <svg class="h-5 w-5 transition-transform group-open:rotate-180" style="color: #64748b;" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <div class="mt-2 text-slate-600 text-sm">Windows (EXE), macOS (ZIP) et Android (test Google Play). iOS est prévu — abonnez‑vous aux mises à jour.</div>
+            <div class="mt-4 pl-14 text-base" style="color: #64748b;">Windows (EXE), macOS (ZIP) et Android (test Google Play). iOS est prévu — abonnez-vous aux mises à jour.</div>
           </details>
 
           <!-- Billing & payments -->
-          <details class="bg-white p-4 rounded border border-gray-100">
-            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
-              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 11h16" stroke="currentColor" stroke-width="2"/></svg>
-              Comment fonctionne la facturation et les paiements ?
+          <details class="group bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all">
+            <summary class="font-bold text-lg cursor-pointer flex items-center justify-between" style="color: #0B1221;">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg" style="background-color: #dbeafe;">
+                  <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Comment fonctionne la facturation ?</span>
+              </div>
+              <svg class="h-5 w-5 transition-transform group-open:rotate-180" style="color: #64748b;" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <div class="mt-2 text-slate-600 text-sm">
-              Sur desktop (Windows/macOS), le paiement s’effectue via <strong>PayPal</strong> ou <strong>virement bancaire</strong>.
+            <div class="mt-4 pl-14 text-base" style="color: #64748b;">
+              Sur desktop (Windows/macOS), le paiement s'effectue via <strong>PayPal</strong> ou <strong>virement bancaire</strong>.
               Sur Android, BrieFly utilise la <strong>facturation Google Play</strong> (tests fermés pour le moment).
-              Vous pouvez annuler à tout moment depuis le canal d’achat correspondant.
+              Vous pouvez annuler à tout moment depuis le canal d'achat correspondant.
             </div>
           </details>
 
           <!-- Devices -->
-          <details class="bg-white p-4 rounded border border-gray-100">
-            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
-              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M3 4h18v12H3z" stroke="currentColor" stroke-width="2"/><path d="M8 20h8" stroke="currentColor" stroke-width="2"/></svg>
-              Combien d’appareils puis‑je utiliser avec mon compte ?
+          <details class="group bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all">
+            <summary class="font-bold text-lg cursor-pointer flex items-center justify-between" style="color: #0B1221;">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg" style="background-color: #dbeafe;">
+                  <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Combien d'appareils puis-je utiliser ?</span>
+              </div>
+              <svg class="h-5 w-5 transition-transform group-open:rotate-180" style="color: #64748b;" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <div class="mt-2 text-slate-600 text-sm">Limite : <strong>2 appareils maximum par utilisateur</strong>. Pour des besoins d’école/équipe, contactez‑nous pour des licences multi‑postes.</div>
+            <div class="mt-4 pl-14 text-base" style="color: #64748b;">Limite : <strong>2 appareils maximum par utilisateur</strong>. Pour des besoins d'école/équipe, contactez-nous pour des licences multi-postes.</div>
           </details>
 
           <!-- Support -->
-          <details class="bg-white p-4 rounded border border-gray-100">
-            <summary class="font-semibold text-slate-800 cursor-pointer flex items-center gap-2">
-              <svg class="h-4 w-4 text-brand-teal" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 017 7v1h1a2 2 0 110 4h-1v1a7 7 0 11-14 0v-1H4a2 2 0 110-4h1V9a7 7 0 017-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Comment obtenir de l’assistance ?
+          <details class="group bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all">
+            <summary class="font-bold text-lg cursor-pointer flex items-center justify-between" style="color: #0B1221;">
+              <div class="flex items-center gap-3">
+                <div class="p-2 rounded-lg" style="background-color: #dbeafe;">
+                  <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Comment obtenir de l'assistance ?</span>
+              </div>
+              <svg class="h-5 w-5 transition-transform group-open:rotate-180" style="color: #64748b;" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <div class="mt-2 text-slate-600 text-sm">Assistance par email rapide. Écrivez‑nous via <a class="text-brand-teal underline" href="#contact">Contact</a> pour toute question ou demande d’accès Android.</div>
+            <div class="mt-4 pl-14 text-base" style="color: #64748b;">Assistance par email rapide. Écrivez-nous via <a class="font-semibold hover:underline" style="color: #009688;" href="#contact">Contact</a> pour toute question ou demande d'accès Android.</div>
           </details>
         </div>
       </div>
     </section>
 
-  <!-- CAPTURES D’ÉCRAN / SCREENSHOTS -->
-  <section id="screenshots" class="py-14 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-teal/10 text-brand-teal">
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M4 7h3l2-2h6l2 2h3v12H4V7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-brand-navy">Captures d’écran</h2>
-      </div>
-
-      <!-- Mobile: horizontal finger-scrollable carousel -->
-      <div class="mt-6 block md:hidden">
-        <div id="screenshots-strip" class="flex gap-4 overflow-x-auto snap-x snap-mandatory touch-pan-x scroll-smooth -mx-4 px-4" style="-webkit-overflow-scrolling: touch; scroll-padding-inline: 16px;">
-          <figure class="min-w-[82%] snap-start shrink-0">
-            <img src="assets/Screenshots/Aviation%20English.png" alt="Aperçu — Aviation English" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-          </figure>
-          <figure class="min-w-[82%] snap-start shrink-0">
-            <img src="assets/Screenshots/DA40%20NG.png" alt="Aperçu — DA40 NG" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-          </figure>
-          <figure class="min-w-[82%] snap-start shrink-0">
-            <img src="assets/Screenshots/Annexe%20OACI.png" alt="Aperçu — Annexes OACI" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-          </figure>
-        </div>
-        <style>
-          @media (max-width: 767px){
-            #screenshots-strip::-webkit-scrollbar{ display: none; }
-            #screenshots-strip{ -ms-overflow-style: none; scrollbar-width: none; }
-          }
-        </style>
-      </div>
-
-      <!-- Desktop: static grid -->
-      <div class="mt-8 hidden md:grid grid-cols-3 gap-6">
-        <img src="assets/Screenshots/Aviation%20English.png" alt="Aperçu — Aviation English" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-        <img src="assets/Screenshots/DA40%20NG.png" alt="Aperçu — DA40 NG" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-        <img src="assets/Screenshots/Annexe%20OACI.png" alt="Aperçu — Annexes OACI" class="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-cover" loading="lazy" />
-      </div>
-    </div>
-  </section>
+  
 
   <!-- CONTACT -->
-    <section id="contact" class="py-12 bg-gray-50">
+    <section id="contact" class="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <div>
-            <h2 class="text-2xl font-extrabold text-brand-navy">Contact & Assistance</h2>
-            <p class="mt-3 text-slate-600">Nous répondons généralement sous <strong>24 h ouvrées</strong>. Pour les écoles de pilotage : partenariats, démos et déploiements multi‑postes.</p>
-
-            <div class="mt-3 flex flex-wrap items-center gap-2 text-sm">
-              <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1">⏱️ <span>Délai moyen &lt; 24 h</span></span>
-              <a class="inline-flex items-center gap-2 rounded-full bg-brand-teal/10 text-brand-teal px-3 py-1 hover:bg-brand-teal/15" href="mailto:slw.dwc@gmail.com?subject=Signalement%20bug%20BrieFly">✉️ <span>slw.dwc@gmail.com</span></a>
-              <a class="inline-flex items-center gap-2 rounded-full bg-green-50 text-green-700 px-3 py-1 hover:bg-green-100" href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer">💬 <span>WhatsApp : +212 643 567 477</span></a>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold" style="color: #0B1221;">Contactez-nous</h2>
+          <p class="mt-4 text-lg" style="color: #475569;">Une question ? Notre équipe est là pour vous aider</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-3 rounded-full" style="background-color: #009688;">
+                  <svg class="h-6 w-6" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/></svg>
+                </div>
+                <h3 class="text-xl font-bold" style="color: #0B1221;">Support rapide</h3>
+              </div>
+              <p class="text-base" style="color: #64748b;">Réponse sous <strong style="color: #009688;">24h ouvrées</strong>. Pour les écoles : partenariats et déploiements multi-postes.</p>
             </div>
 
-            <div class="mt-6 flex items-center gap-3">
-              <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-teal text-white font-medium" href="mailto:slw.dwc@gmail.com">Contacter l’assistance</a>
-              <a class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 text-white font-medium hover:bg-emerald-700" href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.12 1.6 5.92L0 24l6.19-1.63A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a9.93 9.93 0 01-5.06-1.39l-.36-.21-3.66.97.98-3.57-.23-.37A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.2-7.35c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.52.15-.17.2-.29.31-.48.1-.19.05-.36-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.41 0 1.41 1.03 2.77 1.17 2.96.15.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/></svg>
-                <span>WhatsApp</span>
+            <div class="space-y-4">
+              <a href="mailto:slw.dwc@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-xl border-2 border-gray-200 hover:border-blue-400 transition-all shadow-sm hover:shadow-md">
+                <div class="p-3 rounded-lg" style="background-color: #1e40af;">
+                  <svg class="h-6 w-6" style="color: #ffffff;" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="font-semibold" style="color: #0B1221;">Email</div>
+                  <div class="text-sm" style="color: #64748b;">slw.dwc@gmail.com</div>
+                </div>
+              </a>
+              <a href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all shadow-sm hover:shadow-md" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border-color: #25D366;">
+                <div class="p-3 rounded-lg" style="background-color: rgba(255,255,255,0.2);">
+                  <svg class="h-6 w-6" style="color: #ffffff;" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.12 1.6 5.92L0 24l6.19-1.63A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a9.93 9.93 0 01-5.06-1.39l-.36-.21-3.66.97.98-3.57-.23-.37A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.2-7.35c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.52.15-.17.2-.29.31-.48.1-.19.05-.36-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.41 0 1.41 1.03 2.77 1.17 2.96.15.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold" style="color: #ffffff;">WhatsApp</div>
+                  <div class="text-sm" style="color: rgba(255,255,255,0.9);">+212 643 567 477</div>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/nassihsalah" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all shadow-sm hover:shadow-md" style="background: linear-gradient(135deg, #f56040 0%, #e1306c 50%, #c13584 100%); border-color: #e1306c;">
+                <div class="p-3 rounded-lg" style="background-color: rgba(255,255,255,0.2);">
+                  <svg class="h-6 w-6" style="color: #ffffff;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold" style="color: #ffffff;">Instagram</div>
+                  <div class="text-sm" style="color: rgba(255,255,255,0.9);">@nassihsalah</div>
+                </div>
               </a>
             </div>
+
           </div>
 
-          <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-            <h3 class="font-semibold text-slate-800">Nous écrire</h3>
-            <p class="mt-2 text-slate-600 text-sm">Précisez l’appareil, l’OS, la version et une courte description. Nous revenons vers vous rapidement.</p>
-            <form action="mailto:slw.dwc@gmail.com" method="get" class="mt-4 space-y-3" aria-label="Formulaire de contact">
+          <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 shadow-lg">
+            <h3 class="text-2xl font-bold mb-2" style="color: #0B1221;">Envoyez-nous un message</h3>
+            <p class="text-base" style="color: #64748b;">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</p>
+            <form action="mailto:slw.dwc@gmail.com" method="get" class="mt-6 space-y-4" aria-label="Formulaire de contact">
               <div>
-                <label class="block text-sm text-slate-600" for="c-name">Votre nom</label>
-                <input id="c-name" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" type="text" name="name" placeholder="Votre nom" required />
+                <label class="block text-sm font-semibold mb-2" style="color: #0B1221;" for="c-name">Votre nom</label>
+                <input id="c-name" class="block w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors" style="color: #0B1221;" type="text" name="name" placeholder="Votre nom" required />
               </div>
               <div>
-                <label class="block text-sm text-slate-600" for="c-email">Email</label>
-                <input id="c-email" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" type="email" name="email" placeholder="vous@exemple.com" required />
+                <label class="block text-sm font-semibold mb-2" style="color: #0B1221;" for="c-email">Email</label>
+                <input id="c-email" class="block w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors" style="color: #0B1221;" type="email" name="email" placeholder="vous@exemple.com" required />
               </div>
               <div>
-                <label class="block text-sm text-slate-600" for="c-subject">Objet</label>
-                <select id="c-subject" name="subject" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2 text-slate-700">
+                <label class="block text-sm font-semibold mb-2" style="color: #0B1221;" for="c-subject">Objet</label>
+                <select id="c-subject" name="subject" class="block w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors" style="color: #0B1221;">
                   <option value="Support">Support</option>
                   <option value="Partenariat">Partenariat / École</option>
                   <option value="Bug">Signalement de bug</option>
@@ -1048,12 +1137,15 @@
                 </select>
               </div>
               <div>
-                <label class="block text-sm text-slate-600" for="c-message">Message</label>
-                <textarea id="c-message" class="mt-1 block w-full border border-gray-200 rounded-md px-3 py-2" name="message" rows="4" placeholder="Votre message…" required></textarea>
+                <label class="block text-sm font-semibold mb-2" style="color: #0B1221;" for="c-message">Message</label>
+                <textarea id="c-message" class="block w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors" style="color: #0B1221;" name="message" rows="5" placeholder="Décrivez votre demande en détail…" required></textarea>
               </div>
-              <div class="flex items-center justify-between">
-                <p class="text-xs text-slate-500">En envoyant ce message, vous acceptez notre politique de confidentialité.</p>
-                <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-navy text-white font-medium">Envoyer</button>
+              <div>
+                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all" style="background-color: #009688; color: #ffffff;">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Envoyer le message
+                </button>
+                <p class="mt-3 text-xs text-center" style="color: #94a3b8;">🔒 Vos données sont protégées et ne seront jamais partagées</p>
               </div>
             </form>
           </div>
@@ -1064,22 +1156,63 @@
   </main>
 
   <!-- PIED DE PAGE -->
-  <footer class="border-t border-gray-100 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="Icône BrieFly" class="h-10 w-10 rounded-md object-cover" />
+  <footer class="border-t" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); border-color: #e2e8f0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDP_JWqquHDA2zSDIW87bxDBno5qE7JizX3cly_BspzelVwbwwOfz6FGWTSjm3dOtf3O1GD_yI2yyx4wcMMWgO9MGpZNja4dpuot6B_NxUFis1dyGzzXTaNBompsX_YUT273rDc09XP8F1QWU-K1wj7b4ZOjPEFNdgWI5UAOEUvsxv6mBOooZ31Yxp1m2E/s320/logo.png" alt="Icône BrieFly" class="h-12 w-12 rounded-xl object-cover shadow-md" />
+            <div>
+              <div class="font-black text-xl" style="color: #0B1221;">BrieFly</div>
+              <div class="text-xs font-semibold" style="color: #009688;">All You Need To Fly</div>
+            </div>
+          </div>
+          <p class="text-sm mb-4" style="color: #64748b;">Votre compagnon de briefing pré-vol. Cartes, météo, documents et plans de vol dans une seule application professionnelle.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/nassihsalah" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg transition-all hover:scale-110" style="background-color: #f3f4f6;">
+              <svg class="h-5 w-5" style="color: #e1306c;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/212643567477" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg transition-all hover:scale-110" style="background-color: #f3f4f6;">
+              <svg class="h-5 w-5" style="color: #25D366;" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.12 1.6 5.92L0 24l6.19-1.63A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a9.93 9.93 0 01-5.06-1.39l-.36-.21-3.66.97.98-3.57-.23-.37A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.2-7.35c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.14-.14.29-.34.44-.52.15-.17.2-.29.31-.48.1-.19.05-.36-.02-.52-.07-.15-.64-1.55-.88-2.12-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.41 0 1.41 1.03 2.77 1.17 2.96.15.19 2.03 3.1 4.92 4.35.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/></svg>
+            </a>
+            <a href="mailto:slw.dwc@gmail.com" class="p-2 rounded-lg transition-all hover:scale-110" style="background-color: #f3f4f6;">
+              <svg class="h-5 w-5" style="color: #1e40af;" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
         <div>
-          <div class="font-semibold text-brand-navy">BrieFly</div>
-          <div class="text-sm text-slate-500">Version 4.0.0</div>
+          <h4 class="font-bold mb-3" style="color: #0B1221;">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#features" class="hover:underline" style="color: #64748b;">Fonctionnalités</a></li>
+            <li><a href="#downloads" class="hover:underline" style="color: #64748b;">Téléchargements</a></li>
+            <li><a href="#pricing" class="hover:underline" style="color: #64748b;">Tarifs</a></li>
+            <li><a href="#faq" class="hover:underline" style="color: #64748b;">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h4 class="font-bold mb-3" style="color: #0B1221;">Légal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#privacy" class="hover:underline" style="color: #64748b;">Confidentialité</a></li>
+            <li><a href="#contact" class="hover:underline" style="color: #64748b;">Contact</a></li>
+            <li><span style="color: #94a3b8;">Version 5.0.0</span></li>
+          </ul>
         </div>
       </div>
-
-      <div class="text-sm text-slate-600">
-        Made with ❤️ by
-        <a class="text-brand-teal hover:underline" href="https://www.instagram.com/nassihsalah" target="_blank" rel="noopener noreferrer">NASSIH Salaheddine</a>
+      
+      <!-- Bottom bar -->
+      <div class="pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: #e2e8f0;">
+        <div class="text-sm" style="color: #64748b;">
+          &copy; <span id="year"></span> BrieFly. Tous droits réservés.
+        </div>
+        <div class="text-sm" style="color: #64748b;">
+          Made with ❤️ by <a href="https://www.instagram.com/nassihsalah" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color: #009688;">NASSIH Salaheddine</a>
+        </div>
       </div>
-
-      <div class="text-sm text-slate-500">&copy; <span id="year"></span> BrieFly — Tous droits réservés</div>
     </div>
   </footer>
 
